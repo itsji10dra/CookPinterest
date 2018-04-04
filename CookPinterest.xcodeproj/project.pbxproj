@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180BF20754BCD00FD5EAA /* AppDelegate.swift */; };
+		10B180C220754BCD00FD5EAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180C120754BCD00FD5EAA /* ViewController.swift */; };
+		10B180C520754BCD00FD5EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B180C320754BCD00FD5EAA /* Main.storyboard */; };
+		10B180C720754BCE00FD5EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B180C620754BCE00FD5EAA /* Assets.xcassets */; };
+		10B180CA20754BCE00FD5EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B180C820754BCE00FD5EAA /* LaunchScreen.storyboard */; };
+		10B180D520754BCF00FD5EAA /* CookPinterestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180D420754BCF00FD5EAA /* CookPinterestTests.swift */; };
+		10B180E020754BCF00FD5EAA /* CookPinterestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180DF20754BCF00FD5EAA /* CookPinterestUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10B180D120754BCE00FD5EAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10B180B420754BCD00FD5EAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10B180BB20754BCD00FD5EAA;
+			remoteInfo = CookPinterest;
+		};
+		10B180DC20754BCF00FD5EAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10B180B420754BCD00FD5EAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10B180BB20754BCD00FD5EAA;
+			remoteInfo = CookPinterest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10B180BC20754BCD00FD5EAA /* CookPinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookPinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B180BF20754BCD00FD5EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		10B180C120754BCD00FD5EAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		10B180C420754BCD00FD5EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		10B180C620754BCE00FD5EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10B180C920754BCE00FD5EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10B180CB20754BCE00FD5EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10B180D020754BCE00FD5EAA /* CookPinterestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookPinterestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B180D420754BCF00FD5EAA /* CookPinterestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookPinterestTests.swift; sourceTree = "<group>"; };
+		10B180D620754BCF00FD5EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10B180DB20754BCF00FD5EAA /* CookPinterestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookPinterestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B180DF20754BCF00FD5EAA /* CookPinterestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookPinterestUITests.swift; sourceTree = "<group>"; };
+		10B180E120754BCF00FD5EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10B180B920754BCD00FD5EAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B180CD20754BCE00FD5EAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B180D820754BCF00FD5EAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10B180B320754BCD00FD5EAA = {
+			isa = PBXGroup;
+			children = (
+				10B180BE20754BCD00FD5EAA /* CookPinterest */,
+				10B180D320754BCE00FD5EAA /* CookPinterestTests */,
+				10B180DE20754BCF00FD5EAA /* CookPinterestUITests */,
+				10B180BD20754BCD00FD5EAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10B180BD20754BCD00FD5EAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10B180BC20754BCD00FD5EAA /* CookPinterest.app */,
+				10B180D020754BCE00FD5EAA /* CookPinterestTests.xctest */,
+				10B180DB20754BCF00FD5EAA /* CookPinterestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10B180BE20754BCD00FD5EAA /* CookPinterest */ = {
+			isa = PBXGroup;
+			children = (
+				10B180BF20754BCD00FD5EAA /* AppDelegate.swift */,
+				10B180C120754BCD00FD5EAA /* ViewController.swift */,
+				10B180C320754BCD00FD5EAA /* Main.storyboard */,
+				10B180C620754BCE00FD5EAA /* Assets.xcassets */,
+				10B180C820754BCE00FD5EAA /* LaunchScreen.storyboard */,
+				10B180CB20754BCE00FD5EAA /* Info.plist */,
+			);
+			path = CookPinterest;
+			sourceTree = "<group>";
+		};
+		10B180D320754BCE00FD5EAA /* CookPinterestTests */ = {
+			isa = PBXGroup;
+			children = (
+				10B180D420754BCF00FD5EAA /* CookPinterestTests.swift */,
+				10B180D620754BCF00FD5EAA /* Info.plist */,
+			);
+			path = CookPinterestTests;
+			sourceTree = "<group>";
+		};
+		10B180DE20754BCF00FD5EAA /* CookPinterestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				10B180DF20754BCF00FD5EAA /* CookPinterestUITests.swift */,
+				10B180E120754BCF00FD5EAA /* Info.plist */,
+			);
+			path = CookPinterestUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10B180BB20754BCD00FD5EAA /* CookPinterest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10B180E420754BCF00FD5EAA /* Build configuration list for PBXNativeTarget "CookPinterest" */;
+			buildPhases = (
+				10B180B820754BCD00FD5EAA /* Sources */,
+				10B180B920754BCD00FD5EAA /* Frameworks */,
+				10B180BA20754BCD00FD5EAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CookPinterest;
+			productName = CookPinterest;
+			productReference = 10B180BC20754BCD00FD5EAA /* CookPinterest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		10B180CF20754BCE00FD5EAA /* CookPinterestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10B180E720754BCF00FD5EAA /* Build configuration list for PBXNativeTarget "CookPinterestTests" */;
+			buildPhases = (
+				10B180CC20754BCE00FD5EAA /* Sources */,
+				10B180CD20754BCE00FD5EAA /* Frameworks */,
+				10B180CE20754BCE00FD5EAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10B180D220754BCE00FD5EAA /* PBXTargetDependency */,
+			);
+			name = CookPinterestTests;
+			productName = CookPinterestTests;
+			productReference = 10B180D020754BCE00FD5EAA /* CookPinterestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		10B180DA20754BCF00FD5EAA /* CookPinterestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10B180EA20754BCF00FD5EAA /* Build configuration list for PBXNativeTarget "CookPinterestUITests" */;
+			buildPhases = (
+				10B180D720754BCF00FD5EAA /* Sources */,
+				10B180D820754BCF00FD5EAA /* Frameworks */,
+				10B180D920754BCF00FD5EAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10B180DD20754BCF00FD5EAA /* PBXTargetDependency */,
+			);
+			name = CookPinterestUITests;
+			productName = CookPinterestUITests;
+			productReference = 10B180DB20754BCF00FD5EAA /* CookPinterestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10B180B420754BCD00FD5EAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Jitendra Gandhi";
+				TargetAttributes = {
+					10B180BB20754BCD00FD5EAA = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					10B180CF20754BCE00FD5EAA = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 10B180BB20754BCD00FD5EAA;
+					};
+					10B180DA20754BCF00FD5EAA = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 10B180BB20754BCD00FD5EAA;
+					};
+				};
+			};
+			buildConfigurationList = 10B180B720754BCD00FD5EAA /* Build configuration list for PBXProject "CookPinterest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10B180B320754BCD00FD5EAA;
+			productRefGroup = 10B180BD20754BCD00FD5EAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10B180BB20754BCD00FD5EAA /* CookPinterest */,
+				10B180CF20754BCE00FD5EAA /* CookPinterestTests */,
+				10B180DA20754BCF00FD5EAA /* CookPinterestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10B180BA20754BCD00FD5EAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B180CA20754BCE00FD5EAA /* LaunchScreen.storyboard in Resources */,
+				10B180C720754BCE00FD5EAA /* Assets.xcassets in Resources */,
+				10B180C520754BCD00FD5EAA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B180CE20754BCE00FD5EAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B180D920754BCF00FD5EAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10B180B820754BCD00FD5EAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B180C220754BCD00FD5EAA /* ViewController.swift in Sources */,
+				10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B180CC20754BCE00FD5EAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B180D520754BCF00FD5EAA /* CookPinterestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B180D720754BCF00FD5EAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B180E020754BCF00FD5EAA /* CookPinterestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10B180D220754BCE00FD5EAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10B180BB20754BCD00FD5EAA /* CookPinterest */;
+			targetProxy = 10B180D120754BCE00FD5EAA /* PBXContainerItemProxy */;
+		};
+		10B180DD20754BCF00FD5EAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10B180BB20754BCD00FD5EAA /* CookPinterest */;
+			targetProxy = 10B180DC20754BCF00FD5EAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		10B180C320754BCD00FD5EAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10B180C420754BCD00FD5EAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		10B180C820754BCE00FD5EAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10B180C920754BCE00FD5EAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		10B180E220754BCF00FD5EAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		10B180E320754BCF00FD5EAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10B180E520754BCF00FD5EAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLP39UWW3M;
+				INFOPLIST_FILE = CookPinterest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10B180E620754BCF00FD5EAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLP39UWW3M;
+				INFOPLIST_FILE = CookPinterest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		10B180E820754BCF00FD5EAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLP39UWW3M;
+				INFOPLIST_FILE = CookPinterestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookPinterest.app/CookPinterest";
+			};
+			name = Debug;
+		};
+		10B180E920754BCF00FD5EAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLP39UWW3M;
+				INFOPLIST_FILE = CookPinterestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookPinterest.app/CookPinterest";
+			};
+			name = Release;
+		};
+		10B180EB20754BCF00FD5EAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLP39UWW3M;
+				INFOPLIST_FILE = CookPinterestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CookPinterest;
+			};
+			name = Debug;
+		};
+		10B180EC20754BCF00FD5EAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLP39UWW3M;
+				INFOPLIST_FILE = CookPinterestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CookPinterest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10B180B720754BCD00FD5EAA /* Build configuration list for PBXProject "CookPinterest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B180E220754BCF00FD5EAA /* Debug */,
+				10B180E320754BCF00FD5EAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10B180E420754BCF00FD5EAA /* Build configuration list for PBXNativeTarget "CookPinterest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B180E520754BCF00FD5EAA /* Debug */,
+				10B180E620754BCF00FD5EAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10B180E720754BCF00FD5EAA /* Build configuration list for PBXNativeTarget "CookPinterestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B180E820754BCF00FD5EAA /* Debug */,
+				10B180E920754BCF00FD5EAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10B180EA20754BCF00FD5EAA /* Build configuration list for PBXNativeTarget "CookPinterestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B180EB20754BCF00FD5EAA /* Debug */,
+				10B180EC20754BCF00FD5EAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10B180B420754BCD00FD5EAA /* Project object */;
+}
