@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180BF20754BCD00FD5EAA /* AppDelegate.swift */; };
-		10B180C220754BCD00FD5EAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180C120754BCD00FD5EAA /* ViewController.swift */; };
+		10B180C220754BCD00FD5EAA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180C120754BCD00FD5EAA /* HomeVC.swift */; };
 		10B180C520754BCD00FD5EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B180C320754BCD00FD5EAA /* Main.storyboard */; };
 		10B180C720754BCE00FD5EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B180C620754BCE00FD5EAA /* Assets.xcassets */; };
 		10B180CA20754BCE00FD5EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B180C820754BCE00FD5EAA /* LaunchScreen.storyboard */; };
 		10B180D520754BCF00FD5EAA /* CookPinterestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180D420754BCF00FD5EAA /* CookPinterestTests.swift */; };
 		10B180E020754BCF00FD5EAA /* CookPinterestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180DF20754BCF00FD5EAA /* CookPinterestUITests.swift */; };
+		360035CB2F5CB50BC558B70D /* Pods_CookPinterestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6D63259EF21D279E0B65BF /* Pods_CookPinterestUITests.framework */; };
+		64A6C1AA224CFD1607BB5E85 /* Pods_CookPinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD387C21348A293EFA95DF17 /* Pods_CookPinterest.framework */; };
+		FE4612537FDC0F2C3FAF0785 /* Pods_CookPinterestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D606B16E081444F6D802AF92 /* Pods_CookPinterestTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AF121C052BEFAFCEE405447 /* Pods-CookPinterestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterestTests/Pods-CookPinterestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		10B180BC20754BCD00FD5EAA /* CookPinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookPinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B180BF20754BCD00FD5EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		10B180C120754BCD00FD5EAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		10B180C120754BCD00FD5EAA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		10B180C420754BCD00FD5EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10B180C620754BCE00FD5EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10B180C920754BCE00FD5EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		10B180DB20754BCF00FD5EAA /* CookPinterestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookPinterestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B180DF20754BCF00FD5EAA /* CookPinterestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookPinterestUITests.swift; sourceTree = "<group>"; };
 		10B180E120754BCF00FD5EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C6D63259EF21D279E0B65BF /* Pods_CookPinterestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookPinterestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99EEFF1DF0EEE9515F8B32A2 /* Pods-CookPinterestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterestTests/Pods-CookPinterestTests.release.xcconfig"; sourceTree = "<group>"; };
+		A7B834FF22623B67495605C5 /* Pods-CookPinterest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterest/Pods-CookPinterest.release.xcconfig"; sourceTree = "<group>"; };
+		AA03E2715C815B285B667693 /* Pods-CookPinterestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterestUITests/Pods-CookPinterestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD387C21348A293EFA95DF17 /* Pods_CookPinterest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookPinterest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D606B16E081444F6D802AF92 /* Pods_CookPinterestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookPinterestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8A464BFA5F623744AF26DE5 /* Pods-CookPinterestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterestUITests/Pods-CookPinterestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FEB3493FEAB16E834368FF9C /* Pods-CookPinterest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterest/Pods-CookPinterest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A6C1AA224CFD1607BB5E85 /* Pods_CookPinterest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4612537FDC0F2C3FAF0785 /* Pods_CookPinterestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360035CB2F5CB50BC558B70D /* Pods_CookPinterestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				10B180D320754BCE00FD5EAA /* CookPinterestTests */,
 				10B180DE20754BCF00FD5EAA /* CookPinterestUITests */,
 				10B180BD20754BCD00FD5EAA /* Products */,
+				88F3991867C96F933CDB40C8 /* Pods */,
+				E566A32A761AE999E52A7E89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				10B180BF20754BCD00FD5EAA /* AppDelegate.swift */,
-				10B180C120754BCD00FD5EAA /* ViewController.swift */,
+				10B180C120754BCD00FD5EAA /* HomeVC.swift */,
 				10B180C320754BCD00FD5EAA /* Main.storyboard */,
 				10B180C620754BCE00FD5EAA /* Assets.xcassets */,
 				10B180C820754BCE00FD5EAA /* LaunchScreen.storyboard */,
@@ -125,6 +142,29 @@
 			path = CookPinterestUITests;
 			sourceTree = "<group>";
 		};
+		88F3991867C96F933CDB40C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEB3493FEAB16E834368FF9C /* Pods-CookPinterest.debug.xcconfig */,
+				A7B834FF22623B67495605C5 /* Pods-CookPinterest.release.xcconfig */,
+				0AF121C052BEFAFCEE405447 /* Pods-CookPinterestTests.debug.xcconfig */,
+				99EEFF1DF0EEE9515F8B32A2 /* Pods-CookPinterestTests.release.xcconfig */,
+				AA03E2715C815B285B667693 /* Pods-CookPinterestUITests.debug.xcconfig */,
+				E8A464BFA5F623744AF26DE5 /* Pods-CookPinterestUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E566A32A761AE999E52A7E89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD387C21348A293EFA95DF17 /* Pods_CookPinterest.framework */,
+				D606B16E081444F6D802AF92 /* Pods_CookPinterestTests.framework */,
+				2C6D63259EF21D279E0B65BF /* Pods_CookPinterestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10B180E420754BCF00FD5EAA /* Build configuration list for PBXNativeTarget "CookPinterest" */;
 			buildPhases = (
+				F7245561FB87816D1CB0AEDC /* [CP] Check Pods Manifest.lock */,
 				10B180B820754BCD00FD5EAA /* Sources */,
 				10B180B920754BCD00FD5EAA /* Frameworks */,
 				10B180BA20754BCD00FD5EAA /* Resources */,
+				CE8E81417F764E7ED35BACDD /* [CP] Embed Pods Frameworks */,
+				97687001B75B1078A1FE7BDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10B180E720754BCF00FD5EAA /* Build configuration list for PBXNativeTarget "CookPinterestTests" */;
 			buildPhases = (
+				21E2BBA4D680FACBFBD382C5 /* [CP] Check Pods Manifest.lock */,
 				10B180CC20754BCE00FD5EAA /* Sources */,
 				10B180CD20754BCE00FD5EAA /* Frameworks */,
 				10B180CE20754BCE00FD5EAA /* Resources */,
+				8C65DF0BEAEC92ADECE8492D /* [CP] Embed Pods Frameworks */,
+				2E1FA8BC49EE351C05E8D4CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10B180EA20754BCF00FD5EAA /* Build configuration list for PBXNativeTarget "CookPinterestUITests" */;
 			buildPhases = (
+				51C577F3AE380BFD21EB714F /* [CP] Check Pods Manifest.lock */,
 				10B180D720754BCF00FD5EAA /* Sources */,
 				10B180D820754BCF00FD5EAA /* Frameworks */,
 				10B180D920754BCF00FD5EAA /* Resources */,
+				7B87051D6FA4BF9AFBBBE493 /* [CP] Embed Pods Frameworks */,
+				A839E0E7B204910BAEAFAF05 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,12 +300,176 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21E2BBA4D680FACBFBD382C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CookPinterestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E1FA8BC49EE351C05E8D4CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookPinterestTests/Pods-CookPinterestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51C577F3AE380BFD21EB714F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CookPinterestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B87051D6FA4BF9AFBBBE493 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookPinterestUITests/Pods-CookPinterestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C65DF0BEAEC92ADECE8492D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookPinterestTests/Pods-CookPinterestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97687001B75B1078A1FE7BDA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookPinterest/Pods-CookPinterest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A839E0E7B204910BAEAFAF05 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookPinterestUITests/Pods-CookPinterestUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE8E81417F764E7ED35BACDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CookPinterest/Pods-CookPinterest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookPinterest/Pods-CookPinterest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7245561FB87816D1CB0AEDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CookPinterest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10B180B820754BCD00FD5EAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10B180C220754BCD00FD5EAA /* ViewController.swift in Sources */,
+				10B180C220754BCD00FD5EAA /* HomeVC.swift in Sources */,
 				10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,11 +641,13 @@
 		};
 		10B180E520754BCF00FD5EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEB3493FEAB16E834368FF9C /* Pods-CookPinterest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,11 +661,13 @@
 		};
 		10B180E620754BCF00FD5EAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7B834FF22623B67495605C5 /* Pods-CookPinterest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,6 +681,7 @@
 		};
 		10B180E820754BCF00FD5EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AF121C052BEFAFCEE405447 /* Pods-CookPinterestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +703,7 @@
 		};
 		10B180E920754BCF00FD5EAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99EEFF1DF0EEE9515F8B32A2 /* Pods-CookPinterestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +725,7 @@
 		};
 		10B180EB20754BCF00FD5EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA03E2715C815B285B667693 /* Pods-CookPinterestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +746,7 @@
 		};
 		10B180EC20754BCF00FD5EAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8A464BFA5F623744AF26DE5 /* Pods-CookPinterestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
