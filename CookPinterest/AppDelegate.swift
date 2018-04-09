@@ -63,7 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Everything good, here's our access token
         guard let accessToken = parameters["access_token"] else { return false }
         
-        
+        //Save it, for future use.
+        KeychainManager.save(accessToken)
         
         return true
     }

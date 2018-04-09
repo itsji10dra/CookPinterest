@@ -17,6 +17,7 @@ PODS:
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.1.2)
+  - SwiftKeychainWrapper (3.0.1)
 
 DEPENDENCIES:
   - NVActivityIndicatorView
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - RxCocoa (~> 4.0)
   - RxDataSources (~> 3.0)
   - RxSwift (~> 4.0)
+  - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
@@ -35,7 +37,8 @@ SPEC CHECKSUMS:
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: 1837446949909ab26374296981a334fd881391e3
+PODFILE CHECKSUM: 5da5499988dec31142e8d6c6e368a1d198011774
 
 COCOAPODS: 1.4.0

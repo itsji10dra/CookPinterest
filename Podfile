@@ -6,6 +6,7 @@ target 'CookPinterest' do
     
     #Data
     pod 'ObjectMapper', '~> 3.1'
+    pod 'SwiftKeychainWrapper'
     
     #React
     pod 'RxSwift',    '~> 4.0'
