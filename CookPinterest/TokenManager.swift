@@ -1,5 +1,5 @@
 //
-//  KeychainManager.swift
+//  TokenManager.swift
 //  CookPinterest
 //
 //  Created by Jitendra on 09/04/18.
@@ -8,7 +8,7 @@
 
 import SwiftKeychainWrapper
 
-internal struct KeychainManager {
+internal struct TokenManager {
     
     // MARK: - Private
     
@@ -17,6 +17,11 @@ internal struct KeychainManager {
     static private(set) var accessToken: String? = nil
     
     // MARK: - Internal
+    
+    static internal func restore() {
+        guard let token = KeychainWrapper.standard.string(forKey: kAccessTokenKey) else { return }
+        self.accessToken = token
+    }
     
     @discardableResult
     static internal func save(_ token: String) -> Bool {

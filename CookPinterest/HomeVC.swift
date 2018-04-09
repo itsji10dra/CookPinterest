@@ -20,18 +20,17 @@ class HomeVC: UIViewController {
     // MARK: - Rx
     
     let disposeBag = DisposeBag()
-
+    
     // MARK: - View
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let observableToken: Observable<String?> = Observable.just(KeychainManager.accessToken)
+        let observableToken = Observable.just(TokenManager.accessToken)
 
-        observableToken.asObservable()
+        observableToken
             .debug()
             .map { $0 == nil }
-            .share(replay: 1)
             .bind(to: authenticateButton.rx.isEnabled)
             .disposed(by: disposeBag)
     }
@@ -40,7 +39,7 @@ class HomeVC: UIViewController {
     
     @IBAction func authenticateAction(_ sender: Any) {
         
-        guard KeychainManager.accessToken == nil else { return }
+        guard TokenManager.accessToken == nil else { return }
 
         let resource = Resource.oAuth
         var urlComponents = URLComponents(string: Configuration.url + resource.rawValue)

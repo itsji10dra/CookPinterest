@@ -33,9 +33,9 @@ extension AppDelegate {
         guard let accessToken = parameters["access_token"] else { return false }
         
         dismissSafariViewControllerIfAny()
-        
+                
         //Save it, for future use.
-        return KeychainManager.save(accessToken)
+        return TokenManager.save(accessToken)
     }
     
     internal func dismissSafariViewControllerIfAny() {
