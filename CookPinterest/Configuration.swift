@@ -13,4 +13,6 @@ struct Configuration {
     static let clientId = "4959362613107506367"
     
     static let secretKey = "11d6eefd2cf74dc6b03fed0da687b76ec17ebdaf822cc1752a63648dcee7e3c2"
+    
+    static let status = "XyjSoa42793PkeGuwnUb87h"       //Used in Authentication API, just a random string.
 }

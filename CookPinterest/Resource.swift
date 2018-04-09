@@ -20,7 +20,7 @@ extension Resource {
         case .oAuth:
             return ["response_type" : "token",
                     "client_id"     : Configuration.clientId,
-                    "state"         : "xxxxxx",
+                    "state"         : Configuration.status,
                     "scope"         : "read_public",
                     "redirect_uri"  : String(format: "pdk%@://", Configuration.clientId)]
             
