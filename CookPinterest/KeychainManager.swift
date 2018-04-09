@@ -10,19 +10,29 @@ import SwiftKeychainWrapper
 
 internal struct KeychainManager {
     
+    // MARK: - Private
+    
     static private let kAccessTokenKey = "CookPinterestAccessToken"
     
-    static var accessToken: String? {
-        return KeychainWrapper.standard.string(forKey: kAccessTokenKey)
-    }
+    static private(set) var accessToken: String? = nil
+    
+    // MARK: - Internal
     
     @discardableResult
     static internal func save(_ token: String) -> Bool {
-        return KeychainWrapper.standard.set(token, forKey: kAccessTokenKey)
+        let status = KeychainWrapper.standard.set(token, forKey: kAccessTokenKey)
+        if status == true {
+            self.accessToken = token
+        }
+        return status
     }
     
     @discardableResult
     static internal func clear() -> Bool {
-        return KeychainWrapper.standard.removeObject(forKey: kAccessTokenKey)
+        let status = KeychainWrapper.standard.removeObject(forKey: kAccessTokenKey)
+        if status == true {
+            self.accessToken = nil
+        }
+        return status
     }
 }

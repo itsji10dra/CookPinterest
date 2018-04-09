@@ -7,19 +7,41 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import SafariServices
 
 class HomeVC: UIViewController {
 
+    // MARK: - IBOutelts
+
+    @IBOutlet weak var authenticateButton: UIButton!
+    
+    // MARK: - Rx
+    
+    let disposeBag = DisposeBag()
+
+    // MARK: - View
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let observableToken: Observable<String?> = Observable.just(KeychainManager.accessToken)
 
+        observableToken.asObservable()
+            .debug()
+            .map { $0 == nil }
+            .share(replay: 1)
+            .bind(to: authenticateButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
 
     // MARK: - Actions
     
     @IBAction func authenticateAction(_ sender: Any) {
         
+        guard KeychainManager.accessToken == nil else { return }
+
         let resource = Resource.oAuth
         var urlComponents = URLComponents(string: Configuration.url + resource.rawValue)
         urlComponents?.queryItems = resource.parameters.map { return URLQueryItem(name: $0, value: $1) }
@@ -27,6 +49,6 @@ class HomeVC: UIViewController {
         guard let url = urlComponents?.url else { return }
         
         let safariVC = SFSafariViewController(url: url)
-        present(safariVC, animated: true, completion: nil)
+        navigationController?.present(safariVC, animated: true, completion: nil)
     }
 }

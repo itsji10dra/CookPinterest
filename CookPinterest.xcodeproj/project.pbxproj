@@ -17,6 +17,7 @@
 		10B180EF20754E7700FD5EAA /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180EE20754E7700FD5EAA /* Configuration.swift */; };
 		10B180F120754FCC00FD5EAA /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180F020754FCC00FD5EAA /* Resource.swift */; };
 		10C02970207B4CEF00287129 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0296F207B4CEF00287129 /* KeychainManager.swift */; };
+		10C02972207B502600287129 /* AppDelegate+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C02971207B502600287129 /* AppDelegate+Methods.swift */; };
 		360035CB2F5CB50BC558B70D /* Pods_CookPinterestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6D63259EF21D279E0B65BF /* Pods_CookPinterestUITests.framework */; };
 		64A6C1AA224CFD1607BB5E85 /* Pods_CookPinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD387C21348A293EFA95DF17 /* Pods_CookPinterest.framework */; };
 		FE4612537FDC0F2C3FAF0785 /* Pods_CookPinterestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D606B16E081444F6D802AF92 /* Pods_CookPinterestTests.framework */; };
@@ -57,6 +58,7 @@
 		10B180EE20754E7700FD5EAA /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		10B180F020754FCC00FD5EAA /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		10C0296F207B4CEF00287129 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		10C02971207B502600287129 /* AppDelegate+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Methods.swift"; sourceTree = "<group>"; };
 		2C6D63259EF21D279E0B65BF /* Pods_CookPinterestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookPinterestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EEFF1DF0EEE9515F8B32A2 /* Pods-CookPinterestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterestTests/Pods-CookPinterestTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B834FF22623B67495605C5 /* Pods-CookPinterest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterest/Pods-CookPinterest.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				10B180BF20754BCD00FD5EAA /* AppDelegate.swift */,
+				10C02971207B502600287129 /* AppDelegate+Methods.swift */,
 				10B180EE20754E7700FD5EAA /* Configuration.swift */,
 				10B180F020754FCC00FD5EAA /* Resource.swift */,
 				10B180C120754BCD00FD5EAA /* HomeVC.swift */,
@@ -488,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C02972207B502600287129 /* AppDelegate+Methods.swift in Sources */,
 				10B180EF20754E7700FD5EAA /* Configuration.swift in Sources */,
 				10B180F120754FCC00FD5EAA /* Resource.swift in Sources */,
 				10B180C220754BCD00FD5EAA /* HomeVC.swift in Sources */,
