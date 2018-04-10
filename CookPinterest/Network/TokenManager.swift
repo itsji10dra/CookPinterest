@@ -10,9 +10,11 @@ import SwiftKeychainWrapper
 
 internal struct TokenManager {
     
-    // MARK: - Private
+    // MARK: - Internal
     
-    static let kAccessTokenKey = "CookPinterestAccessToken"
+    static internal let kAccessTokenKey = "CookPinterestAccessToken"
+
+    // MARK: - Private
     
     static private(set) var accessToken: String? = nil {
         didSet {
@@ -20,7 +22,7 @@ internal struct TokenManager {
         }
     }
     
-    // MARK: - Internal
+    // MARK: - Internal Methods
     
     static internal func restore() {
         guard let token = KeychainWrapper.standard.string(forKey: kAccessTokenKey) else { return }

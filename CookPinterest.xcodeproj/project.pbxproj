@@ -143,6 +143,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		102616A7207D406B005FE5B2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				102616A0207D346A005FE5B2 /* ParsingHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		10B180B320754BCD00FD5EAA = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +179,7 @@
 				10B180BF20754BCD00FD5EAA /* AppDelegate.swift */,
 				10C02971207B502600287129 /* AppDelegate+Methods.swift */,
 				10B180C320754BCD00FD5EAA /* Main.storyboard */,
-				102616A0207D346A005FE5B2 /* ParsingHelper.swift */,
+				102616A7207D406B005FE5B2 /* Helper */,
 				1026169E207D304B005FE5B2 /* Network */,
 				1026169C207D3035005FE5B2 /* Controllers */,
 				1026169D207D303D005FE5B2 /* Models */,
