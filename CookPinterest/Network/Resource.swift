@@ -38,7 +38,7 @@ struct ResourceAddition {
         case .userBoards:
             guard let accessToken = TokenManager.accessToken else { return nil }
             return ["access_token"  : accessToken,
-                    "fields"        : "id,name,url,image,description,privacy,reason,counts,created_at,creator"]
+                    "fields"        : "id,name,url,image,description,privacy,counts,created_at,creator"]
             
         case .userPins:
             guard let accessToken = TokenManager.accessToken else { return nil }

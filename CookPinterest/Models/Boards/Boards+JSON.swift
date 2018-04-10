@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jitendra Gandhi. All rights reserved.
 //
 
+import ObjectMapper
+
 extension Boards {
     
     static func parse(_ json: Any) -> [Boards]? {

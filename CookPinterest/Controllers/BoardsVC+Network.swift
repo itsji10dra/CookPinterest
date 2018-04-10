@@ -21,13 +21,34 @@ extension BoardsVC {
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] (_, json) in
                 
+                guard let boards = Boards.parse(json) else { return }
+                print(boards)
                 
                 }, onError: { [weak self] error in
                     LoadingIndicator.stopAnimating()
-//                    self?.showNetworkErrorAlert(with: error.localizedDescription)
+                    self?.showNetworkErrorAlert(with: error.localizedDescription)
                 }, onCompleted: {
                     LoadingIndicator.stopAnimating()
             })
             .disposed(by: disposeBag)
+    }
+    
+    private func showNetworkErrorAlert(with message: String) {
+        
+        let alertController = UIAlertController(title: "Error",
+                                                message: message,
+                                                preferredStyle: .alert)
+        
+        let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] action in
+            self?.fetchBoards()
+        }
+        alertController.addAction(retryAction)
+        
+        let goBackAction = UIAlertAction(title: "Go Back", style: .cancel) { [weak self] action in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        alertController.addAction(goBackAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 }

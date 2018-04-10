@@ -10,7 +10,7 @@ import ObjectMapper
 
 struct Boards: Mappable {
     
-    private(set) var id: Int?
+    private(set) var id: String?
     
     var name: String?
     

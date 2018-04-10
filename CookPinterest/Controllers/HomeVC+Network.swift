@@ -42,7 +42,7 @@ extension HomeVC {
             .disposed(by: disposeBag)
     }
     
-    fileprivate func showNetworkErrorAlert(with message: String) {
+    private func showNetworkErrorAlert(with message: String) {
         
         let alertController = UIAlertController(title: "Error",
                                                 message: message,
