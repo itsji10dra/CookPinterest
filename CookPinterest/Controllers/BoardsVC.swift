@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import RxSwift
 
 class BoardsVC: UIViewController {
+
+    // MARK: - Rx
+    
+    let disposeBag = DisposeBag()
+    
+    // MARK: - View
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        fetchBoards()
     }
 }

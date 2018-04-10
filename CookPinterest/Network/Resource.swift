@@ -10,13 +10,13 @@ import Foundation
 
 enum Resource: String {
     
-    case oAuth = "/oauth/"
+    case oAuth      = "/oauth/"
     
-    case userInfo = "/v1/me/"
+    case userInfo   = "/v1/me/"
     
     case userBoards = "/v1/me/boards/"
 
-    case userPins = "/v1/me/pins/"
+    case userPins   = "/v1/me/pins/"
 }
 
 struct ResourceAddition {
@@ -37,7 +37,8 @@ struct ResourceAddition {
             
         case .userBoards:
             guard let accessToken = TokenManager.accessToken else { return nil }
-            return ["access_token"  : accessToken]
+            return ["access_token"  : accessToken,
+                    "fields"        : "id,name,url,image,description,privacy,reason,counts,created_at,creator"]
             
         case .userPins:
             guard let accessToken = TokenManager.accessToken else { return nil }

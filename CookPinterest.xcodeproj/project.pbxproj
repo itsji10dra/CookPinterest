@@ -14,6 +14,10 @@
 		102616A6207D3E1D005FE5B2 /* HomeVC+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616A5207D3E1D005FE5B2 /* HomeVC+Network.swift */; };
 		102616A9207D43AA005FE5B2 /* BoardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616A8207D43AA005FE5B2 /* BoardsVC.swift */; };
 		102616AB207D44A3005FE5B2 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616AA207D44A3005FE5B2 /* Navigation.swift */; };
+		102616AD207D45ED005FE5B2 /* BoardsVC+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616AC207D45ED005FE5B2 /* BoardsVC+Network.swift */; };
+		102616B0207D47D4005FE5B2 /* Boards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616AF207D47D4005FE5B2 /* Boards.swift */; };
+		102616B2207D4853005FE5B2 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B1207D4853005FE5B2 /* Privacy.swift */; };
+		102616B4207D4951005FE5B2 /* Counts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B3207D4951005FE5B2 /* Counts.swift */; };
 		10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180BF20754BCD00FD5EAA /* AppDelegate.swift */; };
 		10B180C220754BCD00FD5EAA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180C120754BCD00FD5EAA /* HomeVC.swift */; };
 		10B180C520754BCD00FD5EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B180C320754BCD00FD5EAA /* Main.storyboard */; };
@@ -56,6 +60,10 @@
 		102616A5207D3E1D005FE5B2 /* HomeVC+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Network.swift"; sourceTree = "<group>"; };
 		102616A8207D43AA005FE5B2 /* BoardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsVC.swift; sourceTree = "<group>"; };
 		102616AA207D44A3005FE5B2 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		102616AC207D45ED005FE5B2 /* BoardsVC+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoardsVC+Network.swift"; sourceTree = "<group>"; };
+		102616AF207D47D4005FE5B2 /* Boards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boards.swift; sourceTree = "<group>"; };
+		102616B1207D4853005FE5B2 /* Privacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Privacy.swift; sourceTree = "<group>"; };
+		102616B3207D4951005FE5B2 /* Counts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counts.swift; sourceTree = "<group>"; };
 		10B180BC20754BCD00FD5EAA /* CookPinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookPinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B180BF20754BCD00FD5EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10B180C120754BCD00FD5EAA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -117,6 +125,7 @@
 				10B180C120754BCD00FD5EAA /* HomeVC.swift */,
 				102616A5207D3E1D005FE5B2 /* HomeVC+Network.swift */,
 				102616A8207D43AA005FE5B2 /* BoardsVC.swift */,
+				102616AC207D45ED005FE5B2 /* BoardsVC+Network.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -124,8 +133,10 @@
 		1026169D207D303D005FE5B2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				10261698207D2F3B005FE5B2 /* UserData.swift */,
-				102616A2207D348D005FE5B2 /* UserData+JSON.swift */,
+				102616AE207D47C5005FE5B2 /* UserData */,
+				102616AF207D47D4005FE5B2 /* Boards.swift */,
+				102616B3207D4951005FE5B2 /* Counts.swift */,
+				102616B1207D4853005FE5B2 /* Privacy.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,6 +166,15 @@
 				102616A0207D346A005FE5B2 /* ParsingHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		102616AE207D47C5005FE5B2 /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				10261698207D2F3B005FE5B2 /* UserData.swift */,
+				102616A2207D348D005FE5B2 /* UserData+JSON.swift */,
+			);
+			path = UserData;
 			sourceTree = "<group>";
 		};
 		10B180B320754BCD00FD5EAA = {
@@ -558,13 +578,17 @@
 				102616A6207D3E1D005FE5B2 /* HomeVC+Network.swift in Sources */,
 				10B180F120754FCC00FD5EAA /* Resource.swift in Sources */,
 				102616A3207D348D005FE5B2 /* UserData+JSON.swift in Sources */,
+				102616B2207D4853005FE5B2 /* Privacy.swift in Sources */,
 				1026169B207D2FFE005FE5B2 /* LoadingIndicator.swift in Sources */,
+				102616B4207D4951005FE5B2 /* Counts.swift in Sources */,
 				10B180C220754BCD00FD5EAA /* HomeVC.swift in Sources */,
 				102616A1207D346A005FE5B2 /* ParsingHelper.swift in Sources */,
 				102616AB207D44A3005FE5B2 /* Navigation.swift in Sources */,
 				102616A9207D43AA005FE5B2 /* BoardsVC.swift in Sources */,
 				10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */,
+				102616AD207D45ED005FE5B2 /* BoardsVC+Network.swift in Sources */,
 				10C02970207B4CEF00287129 /* TokenManager.swift in Sources */,
+				102616B0207D47D4005FE5B2 /* Boards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
