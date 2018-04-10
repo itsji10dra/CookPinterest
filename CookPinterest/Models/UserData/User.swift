@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-struct UserData: Mappable {
+struct User: Mappable {
     
     private(set) var id: Int?
     

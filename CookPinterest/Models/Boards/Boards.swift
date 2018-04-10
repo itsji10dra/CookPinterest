@@ -22,7 +22,7 @@ struct Boards: Mappable {
     
     var createdAt: Date?
     
-    var creator: UserData?
+    var creator: User?
 
     var counts: Counts?
 

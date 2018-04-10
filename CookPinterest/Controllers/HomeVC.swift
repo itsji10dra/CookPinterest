@@ -55,7 +55,7 @@ class HomeVC: UIViewController {
         signOutButton.isEnabled = hasToken
     }
     
-    func updateUserDataUI(with data: UserData?) {
+    func updateUserDataUI(with data: User?) {
         
         var fullName: String?
         

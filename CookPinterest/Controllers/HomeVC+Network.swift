@@ -30,7 +30,7 @@ extension HomeVC {
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] (_, json) in
                 
-                let userData = UserData.parse(json)
+                let userData = User.parse(json)
                 self?.updateUserDataUI(with: userData)
                 
                 }, onError: { [weak self] error in
