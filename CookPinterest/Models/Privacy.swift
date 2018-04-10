@@ -8,6 +8,6 @@
 
 enum Privacy: String {
     
-    case `public`   = "Public"
-    case `private`  = "Private"
+    case `public`   = "public"
+    case `private`  = "private"
 }

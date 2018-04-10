@@ -18,6 +18,7 @@
 		102616B0207D47D4005FE5B2 /* Boards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616AF207D47D4005FE5B2 /* Boards.swift */; };
 		102616B2207D4853005FE5B2 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B1207D4853005FE5B2 /* Privacy.swift */; };
 		102616B4207D4951005FE5B2 /* Counts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B3207D4951005FE5B2 /* Counts.swift */; };
+		102616B6207D4A80005FE5B2 /* Boards+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B5207D4A80005FE5B2 /* Boards+JSON.swift */; };
 		10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180BF20754BCD00FD5EAA /* AppDelegate.swift */; };
 		10B180C220754BCD00FD5EAA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180C120754BCD00FD5EAA /* HomeVC.swift */; };
 		10B180C520754BCD00FD5EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B180C320754BCD00FD5EAA /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		102616AF207D47D4005FE5B2 /* Boards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boards.swift; sourceTree = "<group>"; };
 		102616B1207D4853005FE5B2 /* Privacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Privacy.swift; sourceTree = "<group>"; };
 		102616B3207D4951005FE5B2 /* Counts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counts.swift; sourceTree = "<group>"; };
+		102616B5207D4A80005FE5B2 /* Boards+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Boards+JSON.swift"; sourceTree = "<group>"; };
 		10B180BC20754BCD00FD5EAA /* CookPinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookPinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B180BF20754BCD00FD5EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10B180C120754BCD00FD5EAA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				102616AE207D47C5005FE5B2 /* UserData */,
 				102616AF207D47D4005FE5B2 /* Boards.swift */,
+				102616B5207D4A80005FE5B2 /* Boards+JSON.swift */,
 				102616B3207D4951005FE5B2 /* Counts.swift */,
 				102616B1207D4853005FE5B2 /* Privacy.swift */,
 			);
@@ -574,6 +577,7 @@
 			files = (
 				10C02972207B502600287129 /* AppDelegate+Methods.swift in Sources */,
 				10B180EF20754E7700FD5EAA /* Configuration.swift in Sources */,
+				102616B6207D4A80005FE5B2 /* Boards+JSON.swift in Sources */,
 				10261699207D2F3B005FE5B2 /* UserData.swift in Sources */,
 				102616A6207D3E1D005FE5B2 /* HomeVC+Network.swift in Sources */,
 				10B180F120754FCC00FD5EAA /* Resource.swift in Sources */,
