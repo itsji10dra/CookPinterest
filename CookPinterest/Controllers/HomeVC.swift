@@ -34,8 +34,8 @@ class HomeVC: UIViewController {
         fetchUserDetails()
     }
 
-    // MARK: - UI
-    
+    // MARK: - Notification
+
     private func observeToken() {
         
         NotificationCenter.default.rx.notification(Notification.Name(TokenManager.kAccessTokenKey))
@@ -46,6 +46,8 @@ class HomeVC: UIViewController {
             .disposed(by: disposeBag)
     }
     
+    // MARK: - UI
+
     private func configureUI() {
         
         let hasToken = TokenManager.accessToken != nil
