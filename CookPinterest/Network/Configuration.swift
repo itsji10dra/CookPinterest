@@ -10,9 +10,9 @@ struct Configuration {
         
     static let url = "https://api.pinterest.com"
     
-    static let clientId = "4959362613107506367"
+    static let clientId = "4960611306886413734"
     
-    static let secretKey = "11d6eefd2cf74dc6b03fed0da687b76ec17ebdaf822cc1752a63648dcee7e3c2"
+    static let secretKey = "f0ed4725724832345c8dce82cdc05bad2be26e71cceb073489d386ee4972be15"
     
     static let status = "XyjSoa42793PkeGuwnUb87h"       //Used in Authentication API, just a random string.
 }

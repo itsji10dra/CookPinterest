@@ -43,10 +43,27 @@
                                     <action selector="authenticateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKS-AJ-BgV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVJ-5T-2JQ">
+                                <rect key="frame" x="187" y="164" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBn-GD-bRa">
+                                <rect key="frame" x="157" y="617" width="60" height="30"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lfT-Ue-nlC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nQV-Yd-fBe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JV2-Vk-gJv"/>
+                            <constraint firstItem="bVJ-5T-2JQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NvE-c7-HPM"/>
+                            <constraint firstItem="bVJ-5T-2JQ" firstAttribute="top" secondItem="nQV-Yd-fBe" secondAttribute="bottom" constant="50" id="SWJ-nQ-D6T"/>
+                            <constraint firstItem="NBn-GD-bRa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cUL-Dt-wgk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NBn-GD-bRa" secondAttribute="bottom" constant="20" id="dTD-vI-fmA"/>
                             <constraint firstItem="nQV-Yd-fBe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gmo-NR-Cj4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -54,6 +71,8 @@
                     <navigationItem key="navigationItem" id="wfF-bt-w6w"/>
                     <connections>
                         <outlet property="authenticateButton" destination="nQV-Yd-fBe" id="gEy-FA-NK1"/>
+                        <outlet property="nameLabel" destination="bVJ-5T-2JQ" id="Wth-Wu-LeL"/>
+                        <outlet property="signOutButton" destination="NBn-GD-bRa" id="hTf-vV-z3H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

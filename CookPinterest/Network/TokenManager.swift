@@ -12,9 +12,13 @@ internal struct TokenManager {
     
     // MARK: - Private
     
-    static private let kAccessTokenKey = "CookPinterestAccessToken"
+    static let kAccessTokenKey = "CookPinterestAccessToken"
     
-    static private(set) var accessToken: String? = nil
+    static private(set) var accessToken: String? = nil {
+        didSet {
+            NotificationCenter.default.post(name: Notification.Name(kAccessTokenKey), object: nil)
+        }
+    }
     
     // MARK: - Internal
     
