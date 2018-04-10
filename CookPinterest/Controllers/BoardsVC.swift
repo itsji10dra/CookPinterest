@@ -8,8 +8,18 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
+import PinterestLayout
 
-class BoardsVC: UIViewController {
+class BoardsVC: UIViewController, UICollectionViewDelegate, PinterestLayoutDelegate {
+
+    // MARK: - IBOutlets
+
+    @IBOutlet weak var collectionView: UICollectionView!
+
+    // MARK: - Data
+    
+    let boardsResults = PublishSubject<[Boards]>()
 
     // MARK: - Rx
     
@@ -20,6 +30,39 @@ class BoardsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadDataSource()
+
         fetchBoards()
+    }
+    
+    private func loadDataSource() {
+        
+        let layout = PinterestLayout()
+        collectionView.collectionViewLayout = layout
+        layout.delegate = self
+        layout.cellPadding = 5
+        layout.numberOfColumns = 2
+
+        boardsResults.bind(to: collectionView.rx.items(cellIdentifier: "BoardsCell",
+                                                              cellType: BoardsCell.self)) { (row, element, cell) in
+        
+//                cell.imageView.image = element.
+                                                                
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    func collectionView(collectionView: UICollectionView,
+                        heightForImageAtIndexPath indexPath: IndexPath,
+                        withWidth: CGFloat) -> CGFloat {
+        
+        return 100
+    }
+    
+    func collectionView(collectionView: UICollectionView,
+                        heightForAnnotationAtIndexPath indexPath: IndexPath,
+                        withWidth: CGFloat) -> CGFloat {
+        
+        return 100
     }
 }

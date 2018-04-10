@@ -22,7 +22,7 @@ extension BoardsVC {
             .subscribe(onNext: { [weak self] (_, json) in
                 
                 guard let boards = Boards.parse(json) else { return }
-                print(boards)
+                self?.boardsResults.onNext(boards)
                 
                 }, onError: { [weak self] error in
                     LoadingIndicator.stopAnimating()

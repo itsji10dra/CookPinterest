@@ -19,6 +19,7 @@
 		102616B2207D4853005FE5B2 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B1207D4853005FE5B2 /* Privacy.swift */; };
 		102616B4207D4951005FE5B2 /* Counts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B3207D4951005FE5B2 /* Counts.swift */; };
 		102616B6207D4A80005FE5B2 /* Boards+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B5207D4A80005FE5B2 /* Boards+JSON.swift */; };
+		102616B9207D5624005FE5B2 /* BoardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B8207D5624005FE5B2 /* BoardsCell.swift */; };
 		10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180BF20754BCD00FD5EAA /* AppDelegate.swift */; };
 		10B180C220754BCD00FD5EAA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180C120754BCD00FD5EAA /* HomeVC.swift */; };
 		10B180C520754BCD00FD5EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B180C320754BCD00FD5EAA /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 		102616B1207D4853005FE5B2 /* Privacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Privacy.swift; sourceTree = "<group>"; };
 		102616B3207D4951005FE5B2 /* Counts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counts.swift; sourceTree = "<group>"; };
 		102616B5207D4A80005FE5B2 /* Boards+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Boards+JSON.swift"; sourceTree = "<group>"; };
+		102616B8207D5624005FE5B2 /* BoardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsCell.swift; sourceTree = "<group>"; };
 		10B180BC20754BCD00FD5EAA /* CookPinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookPinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B180BF20754BCD00FD5EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10B180C120754BCD00FD5EAA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -188,6 +190,14 @@
 			path = Boards;
 			sourceTree = "<group>";
 		};
+		102616BB207D56A9005FE5B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				102616B8207D5624005FE5B2 /* BoardsCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		10B180B320754BCD00FD5EAA = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +226,7 @@
 				10B180BF20754BCD00FD5EAA /* AppDelegate.swift */,
 				10C02971207B502600287129 /* AppDelegate+Methods.swift */,
 				10B180C320754BCD00FD5EAA /* Main.storyboard */,
+				102616BB207D56A9005FE5B2 /* Views */,
 				102616A7207D406B005FE5B2 /* Helper */,
 				1026169E207D304B005FE5B2 /* Network */,
 				1026169C207D3035005FE5B2 /* Controllers */,
@@ -535,6 +546,7 @@
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PinterestLayout/PinterestLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -547,6 +559,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinterestLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -584,6 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C02972207B502600287129 /* AppDelegate+Methods.swift in Sources */,
+				102616B9207D5624005FE5B2 /* BoardsCell.swift in Sources */,
 				10B180EF20754E7700FD5EAA /* Configuration.swift in Sources */,
 				102616B6207D4A80005FE5B2 /* Boards+JSON.swift in Sources */,
 				10261699207D2F3B005FE5B2 /* User.swift in Sources */,

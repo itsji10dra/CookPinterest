@@ -5,6 +5,7 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.1.1)
   - NVActivityIndicatorView/Presenter (4.1.1)
   - ObjectMapper (3.1.0)
+  - PinterestLayout (1.0.3)
   - RxAlamofire (4.1.0):
     - RxAlamofire/Core (= 4.1.0)
   - RxAlamofire/Core (4.1.0):
@@ -22,6 +23,7 @@ PODS:
 DEPENDENCIES:
   - NVActivityIndicatorView
   - ObjectMapper (~> 3.1)
+  - PinterestLayout
   - RxAlamofire
   - RxCocoa (~> 4.0)
   - RxDataSources (~> 3.0)
@@ -33,12 +35,13 @@ SPEC CHECKSUMS:
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  PinterestLayout: f1c7ec0254ffa842d69f1b43e4436c8ded4359b9
   RxAlamofire: 96a2bff4694a1609bb59c57b53d99ea7a0ddc64a
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: 5da5499988dec31142e8d6c6e368a1d198011774
+PODFILE CHECKSUM: 33d29e1d5aca1af3357b54feac7f59019a78ad8d
 
 COCOAPODS: 1.4.0
