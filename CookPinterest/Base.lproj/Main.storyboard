@@ -56,9 +56,18 @@
                                     <action selector="signOutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lfT-Ue-nlC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8w-Ez-ZSu">
+                                <rect key="frame" x="144" y="214" width="86" height="30"/>
+                                <state key="normal" title="View Boards"/>
+                                <connections>
+                                    <action selector="viewBoardsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="41O-oU-el3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="N8w-Ez-ZSu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="465-Hn-BoR"/>
+                            <constraint firstItem="N8w-Ez-ZSu" firstAttribute="top" secondItem="bVJ-5T-2JQ" secondAttribute="bottom" constant="50" id="JEs-N1-fzX"/>
                             <constraint firstItem="nQV-Yd-fBe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JV2-Vk-gJv"/>
                             <constraint firstItem="bVJ-5T-2JQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NvE-c7-HPM"/>
                             <constraint firstItem="bVJ-5T-2JQ" firstAttribute="top" secondItem="nQV-Yd-fBe" secondAttribute="bottom" constant="50" id="SWJ-nQ-D6T"/>
@@ -68,16 +77,37 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wfF-bt-w6w"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="wfF-bt-w6w">
+                        <barButtonItem key="backBarButtonItem" title=" " id="sVn-LY-tOv"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="authenticateButton" destination="nQV-Yd-fBe" id="gEy-FA-NK1"/>
                         <outlet property="nameLabel" destination="bVJ-5T-2JQ" id="Wth-Wu-LeL"/>
                         <outlet property="signOutButton" destination="NBn-GD-bRa" id="hTf-vV-z3H"/>
+                        <segue destination="hca-SD-coo" kind="show" identifier="BoardsSegue" id="sXi-0N-6Xb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1036" y="-564"/>
+        </scene>
+        <!--Boards-->
+        <scene sceneID="LIr-tX-gYA">
+            <objects>
+                <viewController storyboardIdentifier="Boards" id="hca-SD-coo" customClass="BoardsVC" customModule="CookPinterest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Wd-9h-I2a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NVd-1I-4F7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Boards" id="C2V-Si-loO">
+                        <barButtonItem key="backBarButtonItem" title=" " id="iNE-Jf-WBO"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJ8-lI-Sdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1964" y="-562"/>
         </scene>
     </scenes>
 </document>

@@ -74,9 +74,22 @@ class HomeVC: UIViewController {
         authenticateUser()
     }
     
+    @IBAction func viewBoardsAction(_ sender: Any) {
+    
+        pushBoardsScene()
+    }
+    
     @IBAction func signOutAction(_ sender: Any) {
         
         TokenManager.clear()
         updateUserDataUI(with: nil)
+    }
+    
+    // MARK: - Navigation
+    
+    private func pushBoardsScene() {
+        
+        guard let boardsVC = Navigation.getViewController(type: BoardsVC.self, identifer: "Boards") else { return }
+        navigationController?.pushViewController(boardsVC, animated: true)
     }
 }

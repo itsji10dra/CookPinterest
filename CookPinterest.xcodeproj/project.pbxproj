@@ -12,6 +12,8 @@
 		102616A1207D346A005FE5B2 /* ParsingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616A0207D346A005FE5B2 /* ParsingHelper.swift */; };
 		102616A3207D348D005FE5B2 /* UserData+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616A2207D348D005FE5B2 /* UserData+JSON.swift */; };
 		102616A6207D3E1D005FE5B2 /* HomeVC+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616A5207D3E1D005FE5B2 /* HomeVC+Network.swift */; };
+		102616A9207D43AA005FE5B2 /* BoardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616A8207D43AA005FE5B2 /* BoardsVC.swift */; };
+		102616AB207D44A3005FE5B2 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616AA207D44A3005FE5B2 /* Navigation.swift */; };
 		10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180BF20754BCD00FD5EAA /* AppDelegate.swift */; };
 		10B180C220754BCD00FD5EAA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180C120754BCD00FD5EAA /* HomeVC.swift */; };
 		10B180C520754BCD00FD5EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B180C320754BCD00FD5EAA /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		102616A0207D346A005FE5B2 /* ParsingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingHelper.swift; sourceTree = "<group>"; };
 		102616A2207D348D005FE5B2 /* UserData+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserData+JSON.swift"; sourceTree = "<group>"; };
 		102616A5207D3E1D005FE5B2 /* HomeVC+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Network.swift"; sourceTree = "<group>"; };
+		102616A8207D43AA005FE5B2 /* BoardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsVC.swift; sourceTree = "<group>"; };
+		102616AA207D44A3005FE5B2 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		10B180BC20754BCD00FD5EAA /* CookPinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookPinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B180BF20754BCD00FD5EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10B180C120754BCD00FD5EAA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			children = (
 				10B180C120754BCD00FD5EAA /* HomeVC.swift */,
 				102616A5207D3E1D005FE5B2 /* HomeVC+Network.swift */,
+				102616A8207D43AA005FE5B2 /* BoardsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 		1026169F207D305A005FE5B2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				102616AA207D44A3005FE5B2 /* Navigation.swift */,
 				1026169A207D2FFD005FE5B2 /* LoadingIndicator.swift */,
 			);
 			path = UI;
@@ -555,6 +561,8 @@
 				1026169B207D2FFE005FE5B2 /* LoadingIndicator.swift in Sources */,
 				10B180C220754BCD00FD5EAA /* HomeVC.swift in Sources */,
 				102616A1207D346A005FE5B2 /* ParsingHelper.swift in Sources */,
+				102616AB207D44A3005FE5B2 /* Navigation.swift in Sources */,
+				102616A9207D43AA005FE5B2 /* BoardsVC.swift in Sources */,
 				10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */,
 				10C02970207B4CEF00287129 /* TokenManager.swift in Sources */,
 			);
