@@ -14,8 +14,7 @@ extension User {
 
         guard let jsonDictionary = json as? [String: AnyObject],
             let dataInfo = jsonDictionary["data"] as? [String: AnyObject],
-            let jsonText = ParsingHelper.getJSONString(dictionary: dataInfo),
-            let userDataObj = Mapper<User>().map(JSONString: jsonText) else { return nil }
+            let userDataObj = User(JSON: dataInfo) else { return nil }
         
         return userDataObj
     }

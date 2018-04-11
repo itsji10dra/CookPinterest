@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import AlamofireImage
 import PinterestLayout
 
 class BoardsVC: UIViewController, UICollectionViewDelegate, PinterestLayoutDelegate {
@@ -45,8 +46,12 @@ class BoardsVC: UIViewController, UICollectionViewDelegate, PinterestLayoutDeleg
 
         boardsResults.bind(to: collectionView.rx.items(cellIdentifier: "BoardsCell",
                                                               cellType: BoardsCell.self)) { (row, element, cell) in
+                                    
+                print("Element:", element)
         
-//                cell.imageView.image = element.
+                                                                if let url = element.images?.first?.url {
+                                                                    cell.imageView.af_setImage(withURL: url)
+                                                                }
                                                                 
             }
             .disposed(by: disposeBag)

@@ -20,6 +20,8 @@
 		102616B4207D4951005FE5B2 /* Counts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B3207D4951005FE5B2 /* Counts.swift */; };
 		102616B6207D4A80005FE5B2 /* Boards+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B5207D4A80005FE5B2 /* Boards+JSON.swift */; };
 		102616B9207D5624005FE5B2 /* BoardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B8207D5624005FE5B2 /* BoardsCell.swift */; };
+		1049C08D207E0FE700312589 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049C08C207E0FE700312589 /* Image.swift */; };
+		1049C08F207E1C9F00312589 /* ImageTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049C08E207E1C9F00312589 /* ImageTransform.swift */; };
 		10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180BF20754BCD00FD5EAA /* AppDelegate.swift */; };
 		10B180C220754BCD00FD5EAA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180C120754BCD00FD5EAA /* HomeVC.swift */; };
 		10B180C520754BCD00FD5EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B180C320754BCD00FD5EAA /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 		102616B3207D4951005FE5B2 /* Counts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counts.swift; sourceTree = "<group>"; };
 		102616B5207D4A80005FE5B2 /* Boards+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Boards+JSON.swift"; sourceTree = "<group>"; };
 		102616B8207D5624005FE5B2 /* BoardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsCell.swift; sourceTree = "<group>"; };
+		1049C08C207E0FE700312589 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		1049C08E207E1C9F00312589 /* ImageTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransform.swift; sourceTree = "<group>"; };
 		10B180BC20754BCD00FD5EAA /* CookPinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookPinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B180BF20754BCD00FD5EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10B180C120754BCD00FD5EAA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			children = (
 				102616AE207D47C5005FE5B2 /* UserData */,
 				102616B7207D4B4F005FE5B2 /* Boards */,
+				1049C090207E213000312589 /* Image */,
 				102616B3207D4951005FE5B2 /* Counts.swift */,
 				102616B1207D4853005FE5B2 /* Privacy.swift */,
 			);
@@ -196,6 +201,15 @@
 				102616B8207D5624005FE5B2 /* BoardsCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1049C090207E213000312589 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				1049C08C207E0FE700312589 /* Image.swift */,
+				1049C08E207E1C9F00312589 /* ImageTransform.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		10B180B320754BCD00FD5EAA = {
@@ -543,6 +557,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CookPinterest/Pods-CookPinterest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -556,6 +571,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -598,6 +614,7 @@
 			files = (
 				10C02972207B502600287129 /* AppDelegate+Methods.swift in Sources */,
 				102616B9207D5624005FE5B2 /* BoardsCell.swift in Sources */,
+				1049C08F207E1C9F00312589 /* ImageTransform.swift in Sources */,
 				10B180EF20754E7700FD5EAA /* Configuration.swift in Sources */,
 				102616B6207D4A80005FE5B2 /* Boards+JSON.swift in Sources */,
 				10261699207D2F3B005FE5B2 /* User.swift in Sources */,
@@ -605,6 +622,7 @@
 				10B180F120754FCC00FD5EAA /* Resource.swift in Sources */,
 				102616A3207D348D005FE5B2 /* User+JSON.swift in Sources */,
 				102616B2207D4853005FE5B2 /* Privacy.swift in Sources */,
+				1049C08D207E0FE700312589 /* Image.swift in Sources */,
 				1026169B207D2FFE005FE5B2 /* LoadingIndicator.swift in Sources */,
 				102616B4207D4951005FE5B2 /* Counts.swift in Sources */,
 				10B180C220754BCD00FD5EAA /* HomeVC.swift in Sources */,
@@ -792,10 +810,7 @@
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -812,10 +827,7 @@
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -832,11 +844,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -854,11 +862,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -875,11 +879,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -896,11 +896,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

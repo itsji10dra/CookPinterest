@@ -25,7 +25,9 @@ struct Boards: Mappable {
     var creator: User?
 
     var counts: Counts?
-
+    
+    var images: [Image]?
+    
     // MARK: - Mappable
     
     init?(map: Map) {
@@ -38,8 +40,9 @@ struct Boards: Mappable {
         description     <- map["description"]
         privacy         <- (map["privacy"], EnumTransform<Privacy>())
         url             <- map["url"]
-        createdAt       <- map["created_at"]
+        createdAt       <- (map["created_at"], DateTransform())
         creator         <- map["creator"]
         counts          <- map["counts"]
+        images          <- (map["image"], ImageTransformType())
     }
 }

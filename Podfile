@@ -19,6 +19,7 @@ target 'CookPinterest' do
     #UI
     pod 'NVActivityIndicatorView'
     pod 'PinterestLayout'
+    pod 'AlamofireImage', '~> 3.3'
     
     target 'CookPinterestTests' do
         inherit! :search_paths

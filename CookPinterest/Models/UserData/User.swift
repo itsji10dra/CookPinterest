@@ -16,7 +16,7 @@ struct User: Mappable {
     
     var lastName: String?
     
-    var url: String?
+    var url: URL?
     
     // MARK: - Mappable
     
@@ -28,6 +28,6 @@ struct User: Mappable {
         id          <- map["id"]
         firstName   <- map["first_name"]
         lastName    <- map["last_name"]
-        url         <- map["url"]
+        url         <- (map["url"], URLTransform())
     }
 }
