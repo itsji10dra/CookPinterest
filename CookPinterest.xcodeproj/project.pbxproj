@@ -19,7 +19,7 @@
 		102616B2207D4853005FE5B2 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B1207D4853005FE5B2 /* Privacy.swift */; };
 		102616B4207D4951005FE5B2 /* Counts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B3207D4951005FE5B2 /* Counts.swift */; };
 		102616B6207D4A80005FE5B2 /* Boards+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B5207D4A80005FE5B2 /* Boards+JSON.swift */; };
-		102616B9207D5624005FE5B2 /* BoardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B8207D5624005FE5B2 /* BoardsCell.swift */; };
+		102616B9207D5624005FE5B2 /* PinsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102616B8207D5624005FE5B2 /* PinsCell.swift */; };
 		1049C08D207E0FE700312589 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049C08C207E0FE700312589 /* Image.swift */; };
 		1049C08F207E1C9F00312589 /* ImageTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049C08E207E1C9F00312589 /* ImageTransform.swift */; };
 		10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180BF20754BCD00FD5EAA /* AppDelegate.swift */; };
@@ -33,6 +33,10 @@
 		10B180F120754FCC00FD5EAA /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B180F020754FCC00FD5EAA /* Resource.swift */; };
 		10C02970207B4CEF00287129 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0296F207B4CEF00287129 /* TokenManager.swift */; };
 		10C02972207B502600287129 /* AppDelegate+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C02971207B502600287129 /* AppDelegate+Methods.swift */; };
+		10C5FFA9207E82AD007B7E2D /* PinsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5FFA8207E82AD007B7E2D /* PinsVC.swift */; };
+		10C5FFAB207E82EE007B7E2D /* Pins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5FFAA207E82EE007B7E2D /* Pins.swift */; };
+		10C5FFAD207E8420007B7E2D /* BoardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5FFAC207E8420007B7E2D /* BoardsCell.swift */; };
+		10C5FFAF207E85F1007B7E2D /* Pins+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5FFAE207E85F1007B7E2D /* Pins+Network.swift */; };
 		360035CB2F5CB50BC558B70D /* Pods_CookPinterestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6D63259EF21D279E0B65BF /* Pods_CookPinterestUITests.framework */; };
 		64A6C1AA224CFD1607BB5E85 /* Pods_CookPinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD387C21348A293EFA95DF17 /* Pods_CookPinterest.framework */; };
 		FE4612537FDC0F2C3FAF0785 /* Pods_CookPinterestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D606B16E081444F6D802AF92 /* Pods_CookPinterestTests.framework */; };
@@ -69,7 +73,7 @@
 		102616B1207D4853005FE5B2 /* Privacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Privacy.swift; sourceTree = "<group>"; };
 		102616B3207D4951005FE5B2 /* Counts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counts.swift; sourceTree = "<group>"; };
 		102616B5207D4A80005FE5B2 /* Boards+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Boards+JSON.swift"; sourceTree = "<group>"; };
-		102616B8207D5624005FE5B2 /* BoardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsCell.swift; sourceTree = "<group>"; };
+		102616B8207D5624005FE5B2 /* PinsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinsCell.swift; sourceTree = "<group>"; };
 		1049C08C207E0FE700312589 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		1049C08E207E1C9F00312589 /* ImageTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransform.swift; sourceTree = "<group>"; };
 		10B180BC20754BCD00FD5EAA /* CookPinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookPinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +93,10 @@
 		10B180F020754FCC00FD5EAA /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		10C0296F207B4CEF00287129 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		10C02971207B502600287129 /* AppDelegate+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Methods.swift"; sourceTree = "<group>"; };
+		10C5FFA8207E82AD007B7E2D /* PinsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinsVC.swift; sourceTree = "<group>"; };
+		10C5FFAA207E82EE007B7E2D /* Pins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pins.swift; sourceTree = "<group>"; };
+		10C5FFAC207E8420007B7E2D /* BoardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsCell.swift; sourceTree = "<group>"; };
+		10C5FFAE207E85F1007B7E2D /* Pins+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pins+Network.swift"; sourceTree = "<group>"; };
 		2C6D63259EF21D279E0B65BF /* Pods_CookPinterestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookPinterestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EEFF1DF0EEE9515F8B32A2 /* Pods-CookPinterestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterestTests/Pods-CookPinterestTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B834FF22623B67495605C5 /* Pods-CookPinterest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterest/Pods-CookPinterest.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +142,8 @@
 				102616A5207D3E1D005FE5B2 /* HomeVC+Network.swift */,
 				102616A8207D43AA005FE5B2 /* BoardsVC.swift */,
 				102616AC207D45ED005FE5B2 /* BoardsVC+Network.swift */,
+				10C5FFA8207E82AD007B7E2D /* PinsVC.swift */,
+				10C5FFAE207E85F1007B7E2D /* Pins+Network.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,6 +192,7 @@
 			children = (
 				10261698207D2F3B005FE5B2 /* User.swift */,
 				102616A2207D348D005FE5B2 /* User+JSON.swift */,
+				10C5FFAA207E82EE007B7E2D /* Pins.swift */,
 			);
 			path = UserData;
 			sourceTree = "<group>";
@@ -198,7 +209,8 @@
 		102616BB207D56A9005FE5B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				102616B8207D5624005FE5B2 /* BoardsCell.swift */,
+				10C5FFAC207E8420007B7E2D /* BoardsCell.swift */,
+				102616B8207D5624005FE5B2 /* PinsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -612,8 +624,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C5FFA9207E82AD007B7E2D /* PinsVC.swift in Sources */,
 				10C02972207B502600287129 /* AppDelegate+Methods.swift in Sources */,
-				102616B9207D5624005FE5B2 /* BoardsCell.swift in Sources */,
+				102616B9207D5624005FE5B2 /* PinsCell.swift in Sources */,
+				10C5FFAB207E82EE007B7E2D /* Pins.swift in Sources */,
 				1049C08F207E1C9F00312589 /* ImageTransform.swift in Sources */,
 				10B180EF20754E7700FD5EAA /* Configuration.swift in Sources */,
 				102616B6207D4A80005FE5B2 /* Boards+JSON.swift in Sources */,
@@ -627,11 +641,13 @@
 				102616B4207D4951005FE5B2 /* Counts.swift in Sources */,
 				10B180C220754BCD00FD5EAA /* HomeVC.swift in Sources */,
 				102616A1207D346A005FE5B2 /* ParsingHelper.swift in Sources */,
+				10C5FFAF207E85F1007B7E2D /* Pins+Network.swift in Sources */,
 				102616AB207D44A3005FE5B2 /* Navigation.swift in Sources */,
 				102616A9207D43AA005FE5B2 /* BoardsVC.swift in Sources */,
 				10B180C020754BCD00FD5EAA /* AppDelegate.swift in Sources */,
 				102616AD207D45ED005FE5B2 /* BoardsVC+Network.swift in Sources */,
 				10C02970207B4CEF00287129 /* TokenManager.swift in Sources */,
+				10C5FFAD207E8420007B7E2D /* BoardsCell.swift in Sources */,
 				102616B0207D47D4005FE5B2 /* Boards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -810,7 +826,10 @@
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -827,7 +846,10 @@
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -844,7 +866,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -862,7 +888,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -879,7 +909,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -896,7 +930,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLP39UWW3M;
 				INFOPLIST_FILE = CookPinterestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsji10dra.CookPinterestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
