@@ -16,7 +16,6 @@ class BoardsCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
-
     // MARK: - View
 
     override func awakeFromNib() {

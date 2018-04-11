@@ -49,12 +49,10 @@ class PinsVC: UIViewController, UICollectionViewDelegate, PinterestLayoutDelegat
         
         pinsDataSource.bind(to: collectionView.rx.items(cellIdentifier: "PinsCell",
                                                         cellType: PinsCell.self)) { (row, element, cell) in
-                                                        
-                                                        print("Element:", element)
-                                                        
-//                                                        if let url = element.images?.first?.url {
-//                                                            cell.imageView.af_setImage(withURL: url)
-//                                                        }
+                                                                                                                
+                                                        if let url = element.images?.first?.url {
+                                                            cell.imageView.af_setImage(withURL: url)
+                                                        }
                                                         
             }
             .disposed(by: disposeBag)

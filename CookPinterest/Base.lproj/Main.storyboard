@@ -57,24 +57,36 @@
                                     <action selector="signOutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lfT-Ue-nlC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8w-Ez-ZSu">
-                                <rect key="frame" x="144" y="214" width="86" height="30"/>
-                                <state key="normal" title="View Boards"/>
-                                <connections>
-                                    <action selector="viewBoardsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="41O-oU-el3"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lqK-25-vhO">
+                                <rect key="frame" x="144" y="214" width="86" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8w-Ez-ZSu">
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
+                                        <state key="normal" title="View Boards"/>
+                                        <connections>
+                                            <action selector="viewBoardsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="41O-oU-el3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dS-ml-hRs">
+                                        <rect key="frame" x="0.0" y="60" width="86" height="30"/>
+                                        <state key="normal" title="View Pins"/>
+                                        <connections>
+                                            <action selector="viewPinsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qy8-Yp-Gal"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="N8w-Ez-ZSu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="465-Hn-BoR"/>
-                            <constraint firstItem="N8w-Ez-ZSu" firstAttribute="top" secondItem="bVJ-5T-2JQ" secondAttribute="bottom" constant="50" id="JEs-N1-fzX"/>
+                            <constraint firstItem="lqK-25-vhO" firstAttribute="top" secondItem="nQV-Yd-fBe" secondAttribute="bottom" constant="100" id="2sY-2N-MOe"/>
                             <constraint firstItem="nQV-Yd-fBe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JV2-Vk-gJv"/>
                             <constraint firstItem="bVJ-5T-2JQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NvE-c7-HPM"/>
                             <constraint firstItem="bVJ-5T-2JQ" firstAttribute="top" secondItem="nQV-Yd-fBe" secondAttribute="bottom" constant="50" id="SWJ-nQ-D6T"/>
                             <constraint firstItem="NBn-GD-bRa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cUL-Dt-wgk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NBn-GD-bRa" secondAttribute="bottom" constant="20" id="dTD-vI-fmA"/>
                             <constraint firstItem="nQV-Yd-fBe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gmo-NR-Cj4"/>
+                            <constraint firstItem="lqK-25-vhO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h9i-Lq-YEU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -86,6 +98,7 @@
                         <outlet property="nameLabel" destination="bVJ-5T-2JQ" id="Wth-Wu-LeL"/>
                         <outlet property="signOutButton" destination="NBn-GD-bRa" id="hTf-vV-z3H"/>
                         <segue destination="hca-SD-coo" kind="show" identifier="BoardsSegue" id="gnS-4y-WSj"/>
+                        <segue destination="Fda-2C-qwz" kind="show" identifier="PinsSegue" id="Ttu-kP-Wz1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,9 +113,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a3d-Q9-WdN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a3d-Q9-WdN">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BoardsCell" rowHeight="80" id="XQv-Ih-I1I" customClass="BoardsCell" customModule="CookPinterest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
@@ -137,8 +151,6 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="cr2-Mx-oup" secondAttribute="bottom" constant="10" id="07x-hM-Hvn"/>
-                                                <constraint firstItem="cr2-Mx-oup" firstAttribute="top" secondItem="QFR-0p-exN" secondAttribute="top" constant="10" id="CfY-LJ-d0w"/>
                                                 <constraint firstItem="c6S-OE-PjF" firstAttribute="centerY" secondItem="QFR-0p-exN" secondAttribute="centerY" id="ZLt-8I-b8s"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="c6S-OE-PjF" secondAttribute="trailing" constant="8" id="b6d-LR-XUz"/>
                                                 <constraint firstItem="cr2-Mx-oup" firstAttribute="centerY" secondItem="QFR-0p-exN" secondAttribute="centerY" id="bRu-ge-puL"/>
@@ -177,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJ8-lI-Sdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1964" y="-562.66866566716647"/>
+            <point key="canvasLocation" x="2020" y="-943"/>
         </scene>
         <!--Pins-->
         <scene sceneID="xDs-Mg-EbO">
@@ -197,14 +209,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BoardsCell" id="s3o-oW-NV3" customClass="PinsCell" customModule="CookPinterest" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PinsCell" id="s3o-oW-NV3" customClass="PinsCell" customModule="CookPinterest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ou8-6R-nJe">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ou8-6R-nJe">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 </imageView>
                                             </subviews>
@@ -243,7 +255,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QI9-0H-Rai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2871" y="-563"/>
+            <point key="canvasLocation" x="2020" y="-125"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pqL-gq-lTZ"/>
+    </inferredMetricsTieBreakers>
 </document>

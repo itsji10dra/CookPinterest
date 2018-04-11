@@ -37,6 +37,7 @@
 		10C5FFAB207E82EE007B7E2D /* Pins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5FFAA207E82EE007B7E2D /* Pins.swift */; };
 		10C5FFAD207E8420007B7E2D /* BoardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5FFAC207E8420007B7E2D /* BoardsCell.swift */; };
 		10C5FFAF207E85F1007B7E2D /* Pins+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5FFAE207E85F1007B7E2D /* Pins+Network.swift */; };
+		10C5FFB1207E8E3A007B7E2D /* Pins+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5FFB0207E8E3A007B7E2D /* Pins+JSON.swift */; };
 		360035CB2F5CB50BC558B70D /* Pods_CookPinterestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6D63259EF21D279E0B65BF /* Pods_CookPinterestUITests.framework */; };
 		64A6C1AA224CFD1607BB5E85 /* Pods_CookPinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD387C21348A293EFA95DF17 /* Pods_CookPinterest.framework */; };
 		FE4612537FDC0F2C3FAF0785 /* Pods_CookPinterestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D606B16E081444F6D802AF92 /* Pods_CookPinterestTests.framework */; };
@@ -97,6 +98,7 @@
 		10C5FFAA207E82EE007B7E2D /* Pins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pins.swift; sourceTree = "<group>"; };
 		10C5FFAC207E8420007B7E2D /* BoardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsCell.swift; sourceTree = "<group>"; };
 		10C5FFAE207E85F1007B7E2D /* Pins+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pins+Network.swift"; sourceTree = "<group>"; };
+		10C5FFB0207E8E3A007B7E2D /* Pins+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pins+JSON.swift"; sourceTree = "<group>"; };
 		2C6D63259EF21D279E0B65BF /* Pods_CookPinterestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookPinterestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EEFF1DF0EEE9515F8B32A2 /* Pods-CookPinterestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterestTests/Pods-CookPinterestTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B834FF22623B67495605C5 /* Pods-CookPinterest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterest/Pods-CookPinterest.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				102616AE207D47C5005FE5B2 /* UserData */,
 				102616B7207D4B4F005FE5B2 /* Boards */,
+				10C5FFB2207E8E3E007B7E2D /* Pins */,
 				1049C090207E213000312589 /* Image */,
 				102616B3207D4951005FE5B2 /* Counts.swift */,
 				102616B1207D4853005FE5B2 /* Privacy.swift */,
@@ -192,7 +195,6 @@
 			children = (
 				10261698207D2F3B005FE5B2 /* User.swift */,
 				102616A2207D348D005FE5B2 /* User+JSON.swift */,
-				10C5FFAA207E82EE007B7E2D /* Pins.swift */,
 			);
 			path = UserData;
 			sourceTree = "<group>";
@@ -289,6 +291,15 @@
 				10B180C620754BCE00FD5EAA /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		10C5FFB2207E8E3E007B7E2D /* Pins */ = {
+			isa = PBXGroup;
+			children = (
+				10C5FFAA207E82EE007B7E2D /* Pins.swift */,
+				10C5FFB0207E8E3A007B7E2D /* Pins+JSON.swift */,
+			);
+			path = Pins;
 			sourceTree = "<group>";
 		};
 		88F3991867C96F933CDB40C8 /* Pods */ = {
@@ -627,6 +638,7 @@
 				10C5FFA9207E82AD007B7E2D /* PinsVC.swift in Sources */,
 				10C02972207B502600287129 /* AppDelegate+Methods.swift in Sources */,
 				102616B9207D5624005FE5B2 /* PinsCell.swift in Sources */,
+				10C5FFB1207E8E3A007B7E2D /* Pins+JSON.swift in Sources */,
 				10C5FFAB207E82EE007B7E2D /* Pins.swift in Sources */,
 				1049C08F207E1C9F00312589 /* ImageTransform.swift in Sources */,
 				10B180EF20754E7700FD5EAA /* Configuration.swift in Sources */,

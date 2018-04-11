@@ -16,6 +16,10 @@ struct Counts: Mappable {
     
     var followers: Int?
     
+    var saves: Int?
+    
+    var comments: Int?
+
     // MARK: - Mappable
     
     init?(map: Map) {
@@ -26,5 +30,7 @@ struct Counts: Mappable {
         pins            <- map["pins"]
         collaborators   <- map["collaborators"]
         followers       <- map["followers"]
+        saves           <- map["saves"]
+        comments        <- map["comments"]
     }
 }

@@ -79,6 +79,11 @@ class HomeVC: UIViewController {
         pushBoardsScene()
     }
     
+    @IBAction func viewPinsAction(_ sender: Any) {
+    
+        pushPinsScene()
+    }
+    
     @IBAction func signOutAction(_ sender: Any) {
         
         TokenManager.clear()
@@ -91,5 +96,11 @@ class HomeVC: UIViewController {
         
         guard let boardsVC = Navigation.getViewController(type: BoardsVC.self, identifer: "Boards") else { return }
         navigationController?.pushViewController(boardsVC, animated: true)
+    }
+    
+    private func pushPinsScene() {
+
+        guard let pinsVC = Navigation.getViewController(type: PinsVC.self, identifer: "Pins") else { return }
+        navigationController?.pushViewController(pinsVC, animated: true)
     }
 }
