@@ -11,9 +11,15 @@ import RxAlamofire
 
 extension PinsVC {
     
-    func fetchPins() {
+    func fetchPins(for boardId: String? = nil) {
 
-        guard let url = ResourceAddition.getURL(for: .userPins) else { return }
+        //If boardId is received, it will pull Pins for specific board, or else all Pins for logged in user.
+        
+        let hasBoardId = boardId != nil
+        let resourcePath: Resource = hasBoardId ? .boardPins : .userPins
+        let parameters: [String]? = hasBoardId ? [boardId!] : nil
+        
+        guard let url = ResourceAddition.getURL(for: resourcePath, appending: parameters) else { return }
         
         LoadingIndicator.startAnimating()
         

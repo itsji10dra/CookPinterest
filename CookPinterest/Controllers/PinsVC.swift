@@ -20,6 +20,8 @@ class PinsVC: UIViewController, UICollectionViewDelegate, PinterestLayoutDelegat
     
     // MARK: - Data
     
+    var boardId: String?
+    
     let pinsDataSource = PublishSubject<[Pins]>()
     
     // MARK: - Rx
@@ -33,7 +35,7 @@ class PinsVC: UIViewController, UICollectionViewDelegate, PinterestLayoutDelegat
 
         configureLayout()
         bindDataSource()
-        fetchPins()
+        fetchPins(for: boardId)
     }
     
     // MARK: - Private Methods

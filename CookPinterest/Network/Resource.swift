@@ -17,11 +17,36 @@ enum Resource: String {
     case userBoards = "/v1/me/boards/"
 
     case userPins   = "/v1/me/pins/"
+    
+    case boardPins  = "/v1/boards/<id>/pins/"
 }
 
 struct ResourceAddition {
     
-    static func getParameters(for resource: Resource) -> [String:String]?  {
+    // MARK: - Public
+
+    static func getURL(for resource: Resource, appending parameters: [String]? = nil, isAuthenticated: Bool = true) -> URL?  {
+        
+        if isAuthenticated &&
+            TokenManager.accessToken == nil {
+            return nil
+        }
+
+        var endPoint = resource.rawValue
+        
+        if let parameters = parameters {
+            endPoint = replace(resource.rawValue, with: parameters)
+        }
+        
+        var urlComponents = URLComponents(string: Configuration.url + endPoint)
+        let parameters = ResourceAddition.getQueryParameters(for: resource)
+        urlComponents?.queryItems = parameters?.map { return URLQueryItem(name: $0, value: $1) }
+        return urlComponents?.url
+    }
+
+    // MARK: - Private
+
+    static private func getQueryParameters(for resource: Resource) -> [String:String]?  {
         
         switch resource {
         case .oAuth:
@@ -40,7 +65,7 @@ struct ResourceAddition {
             return ["access_token"  : accessToken,
                     "fields"        : "id,name,url,image,description,privacy,counts,created_at,creator"]
             
-        case .userPins:
+        case .userPins, .boardPins:
             guard let accessToken = TokenManager.accessToken else { return nil }
             return ["access_token"  : accessToken,
                     "fields"        : "id,note,url,image,board,color,counts,created_at,creator"]
@@ -48,16 +73,25 @@ struct ResourceAddition {
         }
     }
     
-    static func getURL(for resource: Resource, isAuthenticated: Bool = true) -> URL?  {
+    static private func replace(_ source: String, with parameters: [String]) -> String {
         
-        if isAuthenticated &&
-            TokenManager.accessToken == nil {
-            return nil
+        let toReplaceCharacter = "<id>"
+        
+        var path = source
+        
+        let parametersRequired = source.components(separatedBy: toReplaceCharacter).count - 1
+        let parametersReceived = parameters.count
+        
+        guard parametersRequired == parametersReceived else {
+            fatalError("Wrong number of parameters passed. Required: \(parametersRequired), Receieved: \(parametersReceived)")
         }
         
-        var urlComponents = URLComponents(string: Configuration.url + resource.rawValue)
-        let parameters = ResourceAddition.getParameters(for: resource)
-        urlComponents?.queryItems = parameters?.map { return URLQueryItem(name: $0, value: $1) }
-        return urlComponents?.url
+        parameters.forEach { parameter in
+            if let range = path.range(of: toReplaceCharacter) {
+                path = path.replacingCharacters(in: range, with: parameter)
+            }
+        }
+        
+        return path
     }
 }

@@ -58,18 +58,18 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lqK-25-vhO">
-                                <rect key="frame" x="144" y="214" width="86" height="90"/>
+                                <rect key="frame" x="131" y="214" width="112" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8w-Ez-ZSu">
-                                        <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
-                                        <state key="normal" title="View Boards"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="30"/>
+                                        <state key="normal" title="View My Boards"/>
                                         <connections>
                                             <action selector="viewBoardsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="41O-oU-el3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dS-ml-hRs">
-                                        <rect key="frame" x="0.0" y="60" width="86" height="30"/>
-                                        <state key="normal" title="View Pins"/>
+                                        <rect key="frame" x="0.0" y="60" width="112" height="30"/>
+                                        <state key="normal" title="View All My Pins"/>
                                         <connections>
                                             <action selector="viewPinsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qy8-Yp-Gal"/>
                                         </connections>
@@ -259,6 +259,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pqL-gq-lTZ"/>
+        <segue reference="Ttu-kP-Wz1"/>
     </inferredMetricsTieBreakers>
 </document>

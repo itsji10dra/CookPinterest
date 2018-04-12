@@ -32,6 +32,8 @@ class BoardsVC: UIViewController, UITableViewDelegate {
 
         loadDataSource()
 
+        configureModelSelection()
+
         fetchBoards()
     }
     
@@ -48,5 +50,24 @@ class BoardsVC: UIViewController, UITableViewDelegate {
                 }
             }
             .disposed(by: disposeBag)
+    }
+    
+    private func configureModelSelection() {
+        
+        tableView.rx.modelSelected(Boards.self)
+            .subscribe(onNext:  { [weak self] board in
+                guard let boardId = board.id else { return }
+                self?.pushPinsScene(with: boardId)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    // MARK: - Navigation
+    
+    private func pushPinsScene(with boardId: String) {
+        
+        guard let pinsVC = Navigation.getViewController(type: PinsVC.self, identifer: "Pins") else { return }
+        pinsVC.boardId = boardId
+        navigationController?.pushViewController(pinsVC, animated: true)
     }
 }
