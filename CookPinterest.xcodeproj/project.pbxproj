@@ -140,12 +140,9 @@
 		1026169C207D3035005FE5B2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				10B180C120754BCD00FD5EAA /* HomeVC.swift */,
-				102616A5207D3E1D005FE5B2 /* HomeVC+Network.swift */,
-				102616A8207D43AA005FE5B2 /* BoardsVC.swift */,
-				102616AC207D45ED005FE5B2 /* BoardsVC+Network.swift */,
-				10C5FFA8207E82AD007B7E2D /* PinsVC.swift */,
-				10C5FFAE207E85F1007B7E2D /* Pins+Network.swift */,
+				10C91CAA207FBBC300E62576 /* Home */,
+				10C91CAB207FBBCA00E62576 /* Boards */,
+				10C91CAC207FBBD000E62576 /* Pins */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -298,6 +295,33 @@
 			children = (
 				10C5FFAA207E82EE007B7E2D /* Pins.swift */,
 				10C5FFB0207E8E3A007B7E2D /* Pins+JSON.swift */,
+			);
+			path = Pins;
+			sourceTree = "<group>";
+		};
+		10C91CAA207FBBC300E62576 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				10B180C120754BCD00FD5EAA /* HomeVC.swift */,
+				102616A5207D3E1D005FE5B2 /* HomeVC+Network.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		10C91CAB207FBBCA00E62576 /* Boards */ = {
+			isa = PBXGroup;
+			children = (
+				102616A8207D43AA005FE5B2 /* BoardsVC.swift */,
+				102616AC207D45ED005FE5B2 /* BoardsVC+Network.swift */,
+			);
+			path = Boards;
+			sourceTree = "<group>";
+		};
+		10C91CAC207FBBD000E62576 /* Pins */ = {
+			isa = PBXGroup;
+			children = (
+				10C5FFA8207E82AD007B7E2D /* PinsVC.swift */,
+				10C5FFAE207E85F1007B7E2D /* Pins+Network.swift */,
 			);
 			path = Pins;
 			sourceTree = "<group>";
