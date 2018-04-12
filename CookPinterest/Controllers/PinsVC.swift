@@ -36,6 +36,8 @@ class PinsVC: UIViewController, UICollectionViewDelegate, PinterestLayoutDelegat
         fetchPins()
     }
     
+    // MARK: - Private Methods
+    
     private func configureLayout() {
         
         let layout = PinterestLayout()
@@ -57,6 +59,8 @@ class PinsVC: UIViewController, UICollectionViewDelegate, PinterestLayoutDelegat
             }
             .disposed(by: disposeBag)
     }
+    
+    // MARK: - PinterestLayoutDelegate
     
     func collectionView(collectionView: UICollectionView,
                         heightForImageAtIndexPath indexPath: IndexPath,

@@ -40,7 +40,7 @@ extension PinsVC {
                                                 preferredStyle: .alert)
         
         let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] action in
-            self?.fetchBoards()
+            self?.fetchPins()
         }
         alertController.addAction(retryAction)
         
