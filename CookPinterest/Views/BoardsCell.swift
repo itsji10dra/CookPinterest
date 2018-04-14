@@ -21,6 +21,8 @@ class BoardsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        clearSelectedBackgroundView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,5 +30,10 @@ class BoardsCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    private func clearSelectedBackgroundView() {
+        let view = UIView()
+        view.backgroundColor = UIColor.clear
+        backgroundView = view
+    }
 }

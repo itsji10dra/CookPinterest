@@ -69,7 +69,7 @@ struct ResourceAddition {
                     "fields"        : "id,note,url,image,board,color,counts,created_at,creator"]
             
         case .searchUserBoards:
-            guard let boardsParameters = getQueryParameters(for: .userBoards, appending: parameters),
+            guard let boardsParameters = getQueryParameters(for: .userBoards),
                     let searchQuery = parameters?.first else { return nil }
             
             let queryParameters = ["query" : searchQuery]
@@ -78,7 +78,7 @@ struct ResourceAddition {
             return finalParameters
             
         case .searchUserPins:
-            guard let usersParameters = getQueryParameters(for: .userPins, appending: parameters),
+            guard let usersParameters = getQueryParameters(for: .userPins),
                 let searchQuery = parameters?.first else { return nil }
 
             let queryParameters = ["query" : searchQuery]

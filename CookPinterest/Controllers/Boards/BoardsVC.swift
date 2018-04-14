@@ -26,19 +26,49 @@ class BoardsVC: UIViewController, UITableViewDelegate {
     
     let disposeBag = DisposeBag()
     
+    let throttleTimeInterval = 1.0
+    
+    let minimumSearchWordLength = 2
+    
     // MARK: - View
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadDataSource()
+        bindSearchModel()
+        
+        bindDataSource()
 
         configureModelSelection()
 
         fetchBoards()
     }
     
-    private func loadDataSource() {
+    private func bindSearchModel() {
+        
+        let searchWord: Driver<String>? = searchBar.rx.text.orEmpty.asDriver()
+            .flatMapLatest { [weak self] in
+                let invalidCharacter = CharacterSet.letters.union(.whitespaces).inverted
+                let validInputText = $0.trimmingCharacters(in: invalidCharacter)
+                self?.searchBar.text = validInputText
+//                    let shouldReset = (validInputText.count < (self?.minimumSearchWordLength ?? 1))
+//                    if shouldReset == true {
+//                        self?.fetchBoards()
+//                    }
+                return Driver.just(validInputText)
+            }
+            .distinctUntilChanged()
+            .throttle(throttleTimeInterval)
+            .filter {
+                $0.count >= self.minimumSearchWordLength
+            }
+        
+        searchWord?.drive(onNext: { [weak self] searchText in
+            self?.fetchBoards(with: searchText)
+        }).disposed(by: self.disposeBag)
+    }
+    
+    private func bindDataSource() {
         
         boardsDataSource.bind(to: tableView.rx.items(cellIdentifier: "BoardsCell",
                                                      cellType: BoardsCell.self)) { (row, element, cell) in

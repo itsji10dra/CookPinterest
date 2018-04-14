@@ -11,13 +11,21 @@ import RxAlamofire
 
 extension BoardsVC {
     
-    func fetchBoards() {
+    func fetchBoards(with query: String? = nil) {
         
-        guard let url = ResourceAddition.getURL(for: .userBoards) else { return }
+        var url: URL?
+        
+        if let query = query {
+            url = ResourceAddition.getURL(for: .searchUserBoards, appendingQuery: [query])
+        } else {
+            url = ResourceAddition.getURL(for: .userBoards)
+        }
+        
+        guard let finalURL = url else { return }
 
         LoadingIndicator.startAnimating()
         
-        RxAlamofire.requestJSON(.get, url)
+        RxAlamofire.requestJSON(.get, finalURL)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] (_, json) in
                 

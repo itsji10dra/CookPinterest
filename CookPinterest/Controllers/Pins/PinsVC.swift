@@ -57,7 +57,7 @@ class PinsVC: UIViewController, UICollectionViewDelegate, PinterestLayoutDelegat
                 if let url = element.images?.first?.url {
                     cell.imageView.af_setImage(withURL: url)
                 } else {
-                    cell.iconImageView.image = nil
+                    cell.imageView.image = nil
                 }
             }
             .disposed(by: disposeBag)

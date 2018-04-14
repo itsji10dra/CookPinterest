@@ -122,7 +122,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Kw4-jJ-GbY"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a3d-Q9-WdN">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
