@@ -16,9 +16,11 @@ class HomeVC: UIViewController {
 
     @IBOutlet private weak var authenticateButton: UIButton!
     
-    @IBOutlet private weak var signOutButton: UIButton!
-
     @IBOutlet private weak var nameLabel: UILabel!
+
+    @IBOutlet private weak var featuresStackView: UIStackView!
+    
+    @IBOutlet private weak var signOutButton: UIButton!
     
     // MARK: - Rx
     
@@ -30,7 +32,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         
         observeToken()
-        configureUI()
+        configureControlsUI()
         fetchUserDetails()
     }
 
@@ -40,7 +42,7 @@ class HomeVC: UIViewController {
         
         NotificationCenter.default.rx.notification(Notification.Name(TokenManager.kAccessTokenKey))
             .subscribe { [weak self] _ in
-                self?.configureUI()
+                self?.configureControlsUI()
                 self?.fetchUserDetails()
             }
             .disposed(by: disposeBag)
@@ -48,11 +50,12 @@ class HomeVC: UIViewController {
     
     // MARK: - UI
 
-    private func configureUI() {
+    private func configureControlsUI() {
         
         let hasToken = TokenManager.accessToken != nil
         authenticateButton.isEnabled = !hasToken
         signOutButton.isEnabled = hasToken
+        featuresStackView.isHidden = !hasToken
     }
     
     func updateUserDataUI(with data: User?) {

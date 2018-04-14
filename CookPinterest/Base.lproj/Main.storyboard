@@ -95,6 +95,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="authenticateButton" destination="nQV-Yd-fBe" id="gEy-FA-NK1"/>
+                        <outlet property="featuresStackView" destination="lqK-25-vhO" id="Yl9-3p-IVF"/>
                         <outlet property="nameLabel" destination="bVJ-5T-2JQ" id="Wth-Wu-LeL"/>
                         <outlet property="signOutButton" destination="NBn-GD-bRa" id="hTf-vV-z3H"/>
                         <segue destination="hca-SD-coo" kind="show" identifier="BoardsSegue" id="gnS-4y-WSj"/>

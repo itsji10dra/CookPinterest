@@ -19,7 +19,7 @@ extension PinsVC {
         let resourcePath: Resource = hasBoardId ? .boardPins : .userPins
         let parameters: [String]? = hasBoardId ? [boardId!] : nil
         
-        guard let url = ResourceAddition.getURL(for: resourcePath, appending: parameters) else { return }
+        guard let url = ResourceAddition.getURL(for: resourcePath, withResource: parameters) else { return }
         
         LoadingIndicator.startAnimating()
         
