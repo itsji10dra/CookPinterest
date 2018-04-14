@@ -22,10 +22,19 @@ enum Resource: String {
 
     case boardPins          = "/v1/boards/<id>/pins/"
     
-    var queryParametersRequired: Int {
+    
+    //MARK: - Properties
+    
+//    Not Required specifically, as we calculate it programmatically.
+//
+//    var resourceParametersRequired: Int {
+//        return Number of <id> available in resource.rawValue
+//    }
+
+    var queryParametersRequired: Int {              //This includes number of `mandatory` parameters, for 200.
         switch self {
         case .searchUserBoards, .searchUserPins:
-            return 2
+            return 1
         default:
             return 0
         }
