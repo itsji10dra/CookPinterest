@@ -37,28 +37,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQV-Yd-fBe">
-                                <rect key="frame" x="143" y="84" width="88" height="30"/>
-                                <state key="normal" title="Authenticate"/>
-                                <connections>
-                                    <action selector="authenticateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKS-AJ-BgV"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVJ-5T-2JQ">
-                                <rect key="frame" x="187" y="164" width="0.0" height="0.0"/>
+                                <rect key="frame" x="187" y="114" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBn-GD-bRa">
-                                <rect key="frame" x="157" y="617" width="60" height="30"/>
-                                <state key="normal" title="Sign Out"/>
-                                <connections>
-                                    <action selector="signOutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lfT-Ue-nlC"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lqK-25-vhO">
-                                <rect key="frame" x="131" y="214" width="112" height="90"/>
+                                <rect key="frame" x="131" y="164" width="112" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8w-Ez-ZSu">
                                         <rect key="frame" x="0.0" y="0.0" width="112" height="30"/>
@@ -76,17 +62,34 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Oap-8A-fOW">
+                                <rect key="frame" x="103" y="617" width="168" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQV-Yd-fBe">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                        <state key="normal" title="Authenticate"/>
+                                        <connections>
+                                            <action selector="authenticateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKS-AJ-BgV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBn-GD-bRa">
+                                        <rect key="frame" x="108" y="0.0" width="60" height="30"/>
+                                        <state key="normal" title="Sign Out"/>
+                                        <connections>
+                                            <action selector="signOutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lfT-Ue-nlC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lqK-25-vhO" firstAttribute="top" secondItem="nQV-Yd-fBe" secondAttribute="bottom" constant="100" id="2sY-2N-MOe"/>
-                            <constraint firstItem="nQV-Yd-fBe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JV2-Vk-gJv"/>
+                            <constraint firstItem="lqK-25-vhO" firstAttribute="top" secondItem="bVJ-5T-2JQ" secondAttribute="bottom" constant="50" id="LMy-k8-dMi"/>
                             <constraint firstItem="bVJ-5T-2JQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NvE-c7-HPM"/>
-                            <constraint firstItem="bVJ-5T-2JQ" firstAttribute="top" secondItem="nQV-Yd-fBe" secondAttribute="bottom" constant="50" id="SWJ-nQ-D6T"/>
-                            <constraint firstItem="NBn-GD-bRa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cUL-Dt-wgk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NBn-GD-bRa" secondAttribute="bottom" constant="20" id="dTD-vI-fmA"/>
-                            <constraint firstItem="nQV-Yd-fBe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gmo-NR-Cj4"/>
+                            <constraint firstItem="Oap-8A-fOW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V0n-Dw-vlx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="bVJ-5T-2JQ" secondAttribute="bottom" constant="-50" id="akq-dj-hXB"/>
                             <constraint firstItem="lqK-25-vhO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h9i-Lq-YEU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oap-8A-fOW" secondAttribute="bottom" constant="20" id="qjD-yV-aKc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -96,7 +99,7 @@
                     <connections>
                         <outlet property="authenticateButton" destination="nQV-Yd-fBe" id="gEy-FA-NK1"/>
                         <outlet property="featuresStackView" destination="lqK-25-vhO" id="Yl9-3p-IVF"/>
-                        <outlet property="nameLabel" destination="bVJ-5T-2JQ" id="Wth-Wu-LeL"/>
+                        <outlet property="greetingLabel" destination="bVJ-5T-2JQ" id="Wth-Wu-LeL"/>
                         <outlet property="signOutButton" destination="NBn-GD-bRa" id="hTf-vV-z3H"/>
                         <segue destination="hca-SD-coo" kind="show" identifier="BoardsSegue" id="gnS-4y-WSj"/>
                         <segue destination="Fda-2C-qwz" kind="show" identifier="PinsSegue" id="Ttu-kP-Wz1"/>
@@ -114,8 +117,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search your boards..." translatesAutoresizingMaskIntoConstraints="NO" id="vva-gD-Vha">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Kw4-jJ-GbY"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a3d-Q9-WdN">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -173,10 +183,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vva-gD-Vha" firstAttribute="top" secondItem="NVd-1I-4F7" secondAttribute="top" id="Agi-aR-dsF"/>
                             <constraint firstItem="NVd-1I-4F7" firstAttribute="trailing" secondItem="a3d-Q9-WdN" secondAttribute="trailing" id="BrD-6I-07k"/>
                             <constraint firstItem="NVd-1I-4F7" firstAttribute="bottom" secondItem="a3d-Q9-WdN" secondAttribute="bottom" id="IJy-5Q-qHA"/>
-                            <constraint firstItem="a3d-Q9-WdN" firstAttribute="top" secondItem="NVd-1I-4F7" secondAttribute="top" id="WxN-YH-OwS"/>
                             <constraint firstItem="a3d-Q9-WdN" firstAttribute="leading" secondItem="NVd-1I-4F7" secondAttribute="leading" id="XmD-dn-P7j"/>
+                            <constraint firstItem="a3d-Q9-WdN" firstAttribute="top" secondItem="vva-gD-Vha" secondAttribute="bottom" id="cCg-Md-Aab"/>
+                            <constraint firstItem="vva-gD-Vha" firstAttribute="leading" secondItem="NVd-1I-4F7" secondAttribute="leading" id="mHG-eC-LBc"/>
+                            <constraint firstItem="vva-gD-Vha" firstAttribute="trailing" secondItem="NVd-1I-4F7" secondAttribute="trailing" id="p7C-pg-5aD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NVd-1I-4F7"/>
                     </view>
@@ -184,6 +197,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="iNE-Jf-WBO"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="vva-gD-Vha" id="JuU-ic-Wfx"/>
                         <outlet property="tableView" destination="a3d-Q9-WdN" id="pMa-CT-FGF"/>
                         <segue destination="Fda-2C-qwz" kind="show" identifier="PinsSegue" id="pqL-gq-lTZ"/>
                     </connections>
@@ -260,6 +274,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ttu-kP-Wz1"/>
+        <segue reference="pqL-gq-lTZ"/>
     </inferredMetricsTieBreakers>
 </document>

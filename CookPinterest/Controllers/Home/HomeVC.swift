@@ -16,7 +16,7 @@ class HomeVC: UIViewController {
 
     @IBOutlet private weak var authenticateButton: UIButton!
     
-    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var greetingLabel: UILabel!
 
     @IBOutlet private weak var featuresStackView: UIStackView!
     
@@ -53,8 +53,8 @@ class HomeVC: UIViewController {
     private func configureControlsUI() {
         
         let hasToken = TokenManager.accessToken != nil
-        authenticateButton.isEnabled = !hasToken
-        signOutButton.isEnabled = hasToken
+        authenticateButton.isHidden = hasToken
+        signOutButton.isHidden = !hasToken
         featuresStackView.isHidden = !hasToken
     }
     
@@ -62,7 +62,14 @@ class HomeVC: UIViewController {
         
         var fullName: String?
         
-        defer { nameLabel.text = fullName }
+        defer {
+            var text = "Kindly authenticate yourself."
+            if let name = fullName {
+                let greeting = "Welcome: "
+                text = greeting + name
+            }
+            greetingLabel.text = text
+        }
         
         guard let firstName = data?.firstName,
             let lastName = data?.lastName else { return }

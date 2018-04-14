@@ -15,6 +15,7 @@ class BoardsVC: UIViewController, UITableViewDelegate {
 
     // MARK: - IBOutlets
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
 
     // MARK: - Data
@@ -47,6 +48,8 @@ class BoardsVC: UIViewController, UITableViewDelegate {
                 
                 if let url = element.images?.first?.url {
                     cell.iconImageView.af_setImage(withURL: url)
+                } else {
+                    cell.iconImageView.image = nil
                 }
             }
             .disposed(by: disposeBag)
