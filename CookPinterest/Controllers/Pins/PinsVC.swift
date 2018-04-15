@@ -32,6 +32,8 @@ class PinsVC: UIViewController, UICollectionViewDelegate {
     
     private let throttleTimeInterval = 1.0
     
+    private let imageTransitionDuration = 0.1
+    
     // MARK: - View
 
     override func viewDidLoad() {
@@ -88,7 +90,9 @@ class PinsVC: UIViewController, UICollectionViewDelegate {
                 }
                                                             
                 if let url = element.images?.first?.url {
-                    cell.imageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "placeholder"))
+                    cell.imageView.af_setImage(withURL: url,
+                                               placeholderImage: #imageLiteral(resourceName: "placeholder"),
+                                               imageTransition: .crossDissolve(self.imageTransitionDuration))
                 }
             }
             .disposed(by: disposeBag)

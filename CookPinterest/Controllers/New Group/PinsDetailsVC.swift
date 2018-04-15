@@ -36,6 +36,8 @@ class PinsDetailsVC: UIViewController {
     
     private var imageViewAnimator: BFRImageTransitionAnimator?
 
+    private let imageTransitionDuration = 0.1
+
     // MARK: - View
 
     override func viewDidLoad() {
@@ -67,7 +69,9 @@ class PinsDetailsVC: UIViewController {
         }
         
         if let url = pinInfo.images?.first?.url {
-            imageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "big-placeholder"))
+            imageView.af_setImage(withURL: url,
+                                  placeholderImage: #imageLiteral(resourceName: "big-placeholder"),
+                                  imageTransition: .crossDissolve(imageTransitionDuration))
         }
     }
     
