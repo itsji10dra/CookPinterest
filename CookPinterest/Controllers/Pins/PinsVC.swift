@@ -24,6 +24,8 @@ class PinsVC: UIViewController, UICollectionViewDelegate {
     
     internal let pinsDataSource = PublishSubject<[Pins]>()
     
+    internal let defaultHeight: CGFloat = 100
+    
     // MARK: - Rx
     
     internal let disposeBag = DisposeBag()

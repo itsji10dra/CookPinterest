@@ -25,13 +25,13 @@ extension PinsVC: PinterestLayoutDelegate {
                         heightForImageAtIndexPath indexPath: IndexPath,
                         withWidth: CGFloat) -> CGFloat {
         
-        return 100
+        return defaultHeight
     }
     
     func collectionView(collectionView: UICollectionView,
                         heightForAnnotationAtIndexPath indexPath: IndexPath,
                         withWidth: CGFloat) -> CGFloat {
         
-        return 100
+        return defaultHeight
     }
 }

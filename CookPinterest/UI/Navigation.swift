@@ -12,7 +12,6 @@ enum StoryBoard: String {
     case main = "Main"
 }
 
-
 struct Navigation {
     
     static func getViewController<T: UIViewController>(_ storyboard: StoryBoard = .main, type: T.Type, identifer: String) -> T? {
