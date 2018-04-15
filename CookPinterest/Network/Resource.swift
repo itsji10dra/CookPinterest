@@ -22,6 +22,7 @@ enum Resource: String {
 
     case boardPins          = "/v1/boards/<id>/pins/"
     
+    case suggestedBoards    = "/v1/me/boards/suggested/"
     
     // MARK: - Properties
     
@@ -33,7 +34,7 @@ enum Resource: String {
 
     var queryParametersRequired: Int {              //This includes number of `mandatory` parameters, for 200.
         switch self {
-        case .searchUserBoards, .searchUserPins:
+        case .searchUserBoards, .searchUserPins, .suggestedBoards:
             return 1
         default:
             return 0

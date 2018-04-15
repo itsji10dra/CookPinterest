@@ -85,6 +85,16 @@ struct ResourceAddition {
             let finalParameters = usersParameters.merging(queryParameters) { (_, new) in new }
             
             return finalParameters
+            
+        case .suggestedBoards:
+            guard let boardsParameters = getQueryParameters(for: .userBoards),
+                let searchQuery = parameters?.first else { return nil }
+            
+            let queryParameters = ["pin_id" : searchQuery]
+            let finalParameters = boardsParameters.merging(queryParameters) { (_, new) in new }
+            
+            return finalParameters
+
         }
     }
     

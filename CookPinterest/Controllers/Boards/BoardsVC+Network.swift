@@ -20,6 +20,13 @@ extension BoardsVC {
         fetchBoards(with: url)
     }
     
+    internal func fetchUserSuggestedBoards(for pinId: String) {
+        
+        guard let url = ResourceAddition.getURL(for: .suggestedBoards, appendingQuery: [pinId]) else { return }
+        
+        fetchBoards(with: url)
+    }
+    
     internal func fetchUserBoards(with query: String) {
         
         guard let url = ResourceAddition.getURL(for: .searchUserBoards, appendingQuery: [query]) else { return }

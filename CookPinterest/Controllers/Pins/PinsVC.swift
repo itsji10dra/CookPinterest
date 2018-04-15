@@ -37,10 +37,9 @@ class PinsVC: UIViewController, UICollectionViewDelegate {
 
         configureUI()
         configureLayout()
-        bindSearchModel()
         bindDataSource()
+        bindSearchModel()
         configureModelSelection()
-        fetchDefaultPins()
     }
     
     // MARK: - Private Methods

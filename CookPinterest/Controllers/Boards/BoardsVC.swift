@@ -35,12 +35,24 @@ class BoardsVC: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bindSearchModel()
+        configureUI()
         bindDataSource()
+        bindSearchModel()
         configureModelSelection()
-        fetchUserBoards()
     }
     
+    // MARK: - Private Methods
+
+    private func configureUI() {
+        
+        let hasPinId = pinId != nil
+        
+        if hasPinId {         //Search not allowed if showing boards suggested on behalf of specific pin.
+            searchBar.removeFromSuperview()
+            title = "Board Suggestion"
+        }
+    }
+
     private func bindSearchModel() {
         
         let searchWord: Driver<String>? = searchBar.rx.text.orEmpty.asDriver()
@@ -50,7 +62,7 @@ class BoardsVC: UIViewController, UITableViewDelegate {
                 self?.searchBar.text = validInputText
                     let shouldReset = validInputText.count < 1
                     if shouldReset == true {
-                        self?.fetchUserBoards()
+                        self?.fetchDefaultBoards()
                     }
                 return Driver.just(validInputText)
             }
@@ -87,6 +99,15 @@ class BoardsVC: UIViewController, UITableViewDelegate {
                 self?.pushPinsScene(with: boardId)
             })
             .disposed(by: disposeBag)
+    }
+    
+    private func fetchDefaultBoards() {
+    
+        if let pinId = pinId {
+            fetchUserSuggestedBoards(for: pinId)
+        } else {
+            fetchUserBoards()
+        }
     }
     
     // MARK: - Navigation
