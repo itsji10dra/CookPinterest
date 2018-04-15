@@ -11,21 +11,29 @@ import RxAlamofire
 
 extension BoardsVC {
     
-    func fetchBoards(with query: String? = nil) {
-        
-        var url: URL?
-        
-        if let query = query {
-            url = ResourceAddition.getURL(for: .searchUserBoards, appendingQuery: [query])
-        } else {
-            url = ResourceAddition.getURL(for: .userBoards)
-        }
-        
-        guard let finalURL = url else { return }
+    // MARK: - Internal
+    
+    internal func fetchUserBoards() {
+    
+        guard let url = ResourceAddition.getURL(for: .userBoards) else { return }
 
+        fetchBoards(with: url)
+    }
+    
+    internal func fetchUserBoards(with query: String) {
+        
+        guard let url = ResourceAddition.getURL(for: .searchUserBoards, appendingQuery: [query]) else { return }
+
+        fetchBoards(with: url)
+    }
+    
+    // MARK: - Private
+
+    private func fetchBoards(with url: URL) {
+        
         LoadingIndicator.startAnimating()
         
-        RxAlamofire.requestJSON(.get, finalURL)
+        RxAlamofire.requestJSON(.get, url)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] (_, json) in
                 
@@ -48,7 +56,7 @@ extension BoardsVC {
                                                 preferredStyle: .alert)
         
         let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] action in
-            self?.fetchBoards()
+            self?.fetchUserBoards()
         }
         alertController.addAction(retryAction)
         

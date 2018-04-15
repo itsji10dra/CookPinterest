@@ -28,8 +28,6 @@ class BoardsVC: UIViewController, UITableViewDelegate {
     
     let throttleTimeInterval = 1.0
     
-    let minimumSearchWordLength = 2
-    
     // MARK: - View
 
     override func viewDidLoad() {
@@ -41,7 +39,7 @@ class BoardsVC: UIViewController, UITableViewDelegate {
 
         configureModelSelection()
 
-        fetchBoards()
+        fetchUserBoards()
     }
     
     private func bindSearchModel() {
@@ -51,20 +49,17 @@ class BoardsVC: UIViewController, UITableViewDelegate {
                 let invalidCharacter = CharacterSet.letters.union(.whitespaces).inverted
                 let validInputText = $0.trimmingCharacters(in: invalidCharacter)
                 self?.searchBar.text = validInputText
-//                    let shouldReset = (validInputText.count < (self?.minimumSearchWordLength ?? 1))
-//                    if shouldReset == true {
-//                        self?.fetchBoards()
-//                    }
+                    let shouldReset = validInputText.count < 1
+                    if shouldReset == true {
+                        self?.fetchUserBoards()
+                    }
                 return Driver.just(validInputText)
             }
             .distinctUntilChanged()
             .throttle(throttleTimeInterval)
-            .filter {
-                $0.count >= self.minimumSearchWordLength
-            }
         
         searchWord?.drive(onNext: { [weak self] searchText in
-            self?.fetchBoards(with: searchText)
+            self?.fetchUserBoards(with: searchText)
         }).disposed(by: self.disposeBag)
     }
     
