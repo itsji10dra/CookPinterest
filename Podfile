@@ -11,7 +11,6 @@ target 'CookPinterest' do
     #React
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
-    pod 'RxDataSources', '~> 3.0'
     
     #React + Networking
     pod 'RxAlamofire'
