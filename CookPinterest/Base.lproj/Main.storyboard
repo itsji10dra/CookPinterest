@@ -125,7 +125,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search your boards..." translatesAutoresizingMaskIntoConstraints="NO" id="vva-gD-Vha">
+                            <searchBar contentMode="redraw" text="" placeholder="Search your boards..." translatesAutoresizingMaskIntoConstraints="NO" id="vva-gD-Vha">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Kw4-jJ-GbY"/>
@@ -196,10 +196,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vva-gD-Vha" firstAttribute="top" secondItem="9Wd-9h-I2a" secondAttribute="top" constant="64" id="Agi-aR-dsF"/>
+                            <constraint firstItem="vva-gD-Vha" firstAttribute="top" secondItem="9Wd-9h-I2a" secondAttribute="top" priority="750" constant="64" id="Agi-aR-dsF"/>
                             <constraint firstItem="NVd-1I-4F7" firstAttribute="trailing" secondItem="a3d-Q9-WdN" secondAttribute="trailing" id="BrD-6I-07k"/>
                             <constraint firstItem="NVd-1I-4F7" firstAttribute="bottom" secondItem="a3d-Q9-WdN" secondAttribute="bottom" id="IJy-5Q-qHA"/>
                             <constraint firstItem="a3d-Q9-WdN" firstAttribute="top" secondItem="9Wd-9h-I2a" secondAttribute="top" priority="750" id="Lea-2f-qTh"/>
+                            <constraint firstItem="NVd-1I-4F7" firstAttribute="top" secondItem="vva-gD-Vha" secondAttribute="top" id="UY4-w3-VGo"/>
                             <constraint firstItem="a3d-Q9-WdN" firstAttribute="leading" secondItem="NVd-1I-4F7" secondAttribute="leading" id="XmD-dn-P7j"/>
                             <constraint firstItem="a3d-Q9-WdN" firstAttribute="top" secondItem="vva-gD-Vha" secondAttribute="bottom" id="cCg-Md-Aab"/>
                             <constraint firstItem="vva-gD-Vha" firstAttribute="leading" secondItem="NVd-1I-4F7" secondAttribute="leading" id="mHG-eC-LBc"/>
@@ -316,13 +317,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4IJ-Un-kA3" firstAttribute="trailing" secondItem="P2l-AN-rBe" secondAttribute="trailing" id="DNa-vY-PKf"/>
-                            <constraint firstItem="bRF-m1-1iz" firstAttribute="top" secondItem="ehw-wc-mBE" secondAttribute="top" constant="64" id="HG1-Xm-77n"/>
+                            <constraint firstItem="bRF-m1-1iz" firstAttribute="top" secondItem="ehw-wc-mBE" secondAttribute="top" priority="750" constant="64" id="HG1-Xm-77n"/>
                             <constraint firstItem="P2l-AN-rBe" firstAttribute="top" secondItem="bRF-m1-1iz" secondAttribute="bottom" id="Nv6-OL-L2b"/>
                             <constraint firstItem="bRF-m1-1iz" firstAttribute="leading" secondItem="4IJ-Un-kA3" secondAttribute="leading" id="a5h-oq-mXV"/>
                             <constraint firstItem="bRF-m1-1iz" firstAttribute="trailing" secondItem="4IJ-Un-kA3" secondAttribute="trailing" id="aGn-Ah-5a2"/>
                             <constraint firstItem="P2l-AN-rBe" firstAttribute="top" secondItem="ehw-wc-mBE" secondAttribute="top" priority="750" id="cFC-7F-Mpm"/>
                             <constraint firstItem="4IJ-Un-kA3" firstAttribute="bottom" secondItem="P2l-AN-rBe" secondAttribute="bottom" id="ecp-UO-De7"/>
                             <constraint firstItem="P2l-AN-rBe" firstAttribute="leading" secondItem="4IJ-Un-kA3" secondAttribute="leading" id="kJa-tc-3XZ"/>
+                            <constraint firstItem="4IJ-Un-kA3" firstAttribute="top" secondItem="bRF-m1-1iz" secondAttribute="top" id="sRd-Xm-3xs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4IJ-Un-kA3"/>
                     </view>
@@ -361,10 +363,10 @@
                                 <rect key="frame" x="0.0" y="301.5" width="375" height="334"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZF1-Ks-NrH">
-                                        <rect key="frame" x="0.0" y="1" width="375" height="334"/>
+                                        <rect key="frame" x="0.0" y="0.5" width="375" height="334"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Acx-D1-0kr">
-                                                <rect key="frame" x="8" y="1" width="359" height="334"/>
+                                                <rect key="frame" x="8" y="0.5" width="359" height="334"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z8A-Mq-tJx">
                                                         <rect key="frame" x="0.0" y="0.5" width="33" height="50"/>
@@ -447,16 +449,16 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="blP-N2-J61">
-                                                        <rect key="frame" x="0.0" y="240.5" width="107.5" height="34"/>
+                                                        <rect key="frame" x="0.0" y="240.5" width="107.5" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of comments:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5l-wJ-S82" userLabel="No. of Comments:">
-                                                                <rect key="frame" x="0.0" y="0.5" width="107.5" height="16"/>
+                                                                <rect key="frame" x="0.0" y="0.5" width="107.5" height="32"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySj-hf-53X">
-                                                                <rect key="frame" x="0.0" y="16.5" width="107.5" height="18"/>
+                                                                <rect key="frame" x="0.0" y="32.5" width="107.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -467,16 +469,16 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vkl-Fv-KAI">
-                                                        <rect key="frame" x="0.0" y="284.5" width="116.5" height="50"/>
+                                                        <rect key="frame" x="0.0" y="300.5" width="116.5" height="34"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of times saved:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoG-ge-jlj">
-                                                                <rect key="frame" x="0.0" y="0.5" width="116.5" height="32"/>
+                                                                <rect key="frame" x="0.0" y="0.5" width="116.5" height="16"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABQ-ow-Inx">
-                                                                <rect key="frame" x="0.0" y="32.5" width="116.5" height="18"/>
+                                                                <rect key="frame" x="0.0" y="16.5" width="116.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -579,6 +581,6 @@
         <image name="big-placeholder" width="166" height="166"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ttu-kP-Wz1"/>
+        <segue reference="pqL-gq-lTZ"/>
     </inferredMetricsTieBreakers>
 </document>
