@@ -6,8 +6,7 @@
 //  Copyright © 2018 Jitendra Gandhi. All rights reserved.
 //
 
-import RxSwift
-import RxAlamofire
+import UIKit
 import SafariServices
 
 extension HomeVC {
@@ -26,9 +25,9 @@ extension HomeVC {
         
         LoadingIndicator.startAnimating()
         
-        RxAlamofire.requestJSON(.get, url)
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] (_, json) in
+        let observable = NetworkManager.getRequest(with: url)
+        
+        observable.subscribe(onNext: { [weak self] (_, json) in
                 
                 let userData = User.parse(json)
                 self?.updateUserDataUI(with: userData)

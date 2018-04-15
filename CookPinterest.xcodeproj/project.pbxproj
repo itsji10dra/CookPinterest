@@ -44,6 +44,7 @@
 		10DCD1C820834EB5009EF0B1 /* PinsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DCD1C720834EB5009EF0B1 /* PinsDetailsVC.swift */; };
 		10DCD1CB2083529C009EF0B1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DCD1CA2083529C009EF0B1 /* Date+Extension.swift */; };
 		10DCD1CD208357F8009EF0B1 /* Pins+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DCD1CC208357F8009EF0B1 /* Pins+Navigation.swift */; };
+		10F999E92083C1C400ED2CF2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F999E82083C1C300ED2CF2 /* NetworkManager.swift */; };
 		360035CB2F5CB50BC558B70D /* Pods_CookPinterestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6D63259EF21D279E0B65BF /* Pods_CookPinterestUITests.framework */; };
 		64A6C1AA224CFD1607BB5E85 /* Pods_CookPinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD387C21348A293EFA95DF17 /* Pods_CookPinterest.framework */; };
 		FE4612537FDC0F2C3FAF0785 /* Pods_CookPinterestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D606B16E081444F6D802AF92 /* Pods_CookPinterestTests.framework */; };
@@ -111,6 +112,7 @@
 		10DCD1C720834EB5009EF0B1 /* PinsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinsDetailsVC.swift; sourceTree = "<group>"; };
 		10DCD1CA2083529C009EF0B1 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		10DCD1CC208357F8009EF0B1 /* Pins+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pins+Navigation.swift"; sourceTree = "<group>"; };
+		10F999E82083C1C300ED2CF2 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2C6D63259EF21D279E0B65BF /* Pods_CookPinterestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookPinterestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EEFF1DF0EEE9515F8B32A2 /* Pods-CookPinterestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterestTests/Pods-CookPinterestTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B834FF22623B67495605C5 /* Pods-CookPinterest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookPinterest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookPinterest/Pods-CookPinterest.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				10B180F020754FCC00FD5EAA /* Resource.swift */,
 				1095618520822D460023DEE7 /* ResourceAddition.swift */,
 				10C0296F207B4CEF00287129 /* TokenManager.swift */,
+				10F999E82083C1C300ED2CF2 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				1095618620822D460023DEE7 /* ResourceAddition.swift in Sources */,
 				102616A3207D348D005FE5B2 /* User+JSON.swift in Sources */,
 				10DCD1CB2083529C009EF0B1 /* Date+Extension.swift in Sources */,
+				10F999E92083C1C400ED2CF2 /* NetworkManager.swift in Sources */,
 				10DCD1C320833385009EF0B1 /* Pins+Layout.swift in Sources */,
 				102616B2207D4853005FE5B2 /* Privacy.swift in Sources */,
 				1049C08D207E0FE700312589 /* Image.swift in Sources */,

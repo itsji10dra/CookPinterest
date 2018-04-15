@@ -6,8 +6,7 @@
 //  Copyright © 2018 Jitendra Gandhi. All rights reserved.
 //
 
-import RxSwift
-import RxAlamofire
+import UIKit
 
 extension BoardsVC {
     
@@ -47,9 +46,9 @@ extension BoardsVC {
         
         LoadingIndicator.startAnimating()
         
-        RxAlamofire.requestJSON(.get, url)
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] (_, json) in
+        let observable = NetworkManager.getRequest(with: url)
+
+        observable.subscribe(onNext: { [weak self] (_, json) in
                 
                 guard let boards = Boards.parse(json) else { return }
                 self?.boardsDataSource.onNext(boards)
