@@ -37,7 +37,7 @@ class BoardsCell: UITableViewCell {
         
         titleLabel.text = nil
         descriptionLabel.text = nil
-        iconImageView.image = nil
+        iconImageView.image = #imageLiteral(resourceName: "small-placeholder")
     }
 
     // MARK: - Private Methods

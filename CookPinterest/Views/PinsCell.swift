@@ -24,6 +24,6 @@ class PinsCell: UICollectionViewCell {
         super.prepareForReuse()
         
         titleLabel.text = nil
-        imageView.image = nil
+        imageView.image = #imageLiteral(resourceName: "placeholder")
     }
 }

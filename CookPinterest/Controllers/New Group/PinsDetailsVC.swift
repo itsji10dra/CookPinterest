@@ -67,7 +67,7 @@ class PinsDetailsVC: UIViewController {
         }
         
         if let url = pinInfo.images?.first?.url {
-            imageView.af_setImage(withURL: url)
+            imageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "big-placeholder"))
         }
     }
     

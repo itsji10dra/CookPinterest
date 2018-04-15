@@ -34,6 +34,8 @@ class BoardsVC: UIViewController, UITableViewDelegate {
     
     private let throttleTimeInterval = 1.0
     
+    private let imageTransitionDuration = 0.1
+
     // MARK: - View
 
     override func viewDidLoad() {
@@ -93,7 +95,9 @@ class BoardsVC: UIViewController, UITableViewDelegate {
                 cell.descriptionLabel.text = element.description
                 
                 if let url = element.images?.first?.url {
-                    cell.iconImageView.af_setImage(withURL: url)
+                    cell.iconImageView.af_setImage(withURL: url,
+                                                   placeholderImage: #imageLiteral(resourceName: "small-placeholder"),
+                                                   imageTransition: .crossDissolve(self.imageTransitionDuration))
                 } else {
                     cell.iconImageView.image = nil
                 }

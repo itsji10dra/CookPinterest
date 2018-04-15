@@ -88,7 +88,7 @@ class PinsVC: UIViewController, UICollectionViewDelegate {
                 }
                                                             
                 if let url = element.images?.first?.url {
-                    cell.imageView.af_setImage(withURL: url)
+                    cell.imageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "placeholder"))
                 }
             }
             .disposed(by: disposeBag)
