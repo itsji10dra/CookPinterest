@@ -24,7 +24,7 @@ enum Resource: String {
     
     case suggestedBoards    = "/v1/me/boards/suggested/"
     
-    case userFollowers      = "/v1/me/followers/"
+    case followingBoards    = "/v1/me/following/boards/"
     
     // MARK: - Properties
     
