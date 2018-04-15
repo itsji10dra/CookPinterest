@@ -49,21 +49,23 @@ extension BoardsVC {
                 
                 }, onError: { [weak self] error in
                     LoadingIndicator.stopAnimating()
-                    self?.showNetworkErrorAlert(with: error.localizedDescription)
+                    self?.showNetworkErrorAlert(with: error.localizedDescription, retryAction: {
+                        self?.fetchBoards(with: url)
+                    })
                 }, onCompleted: {
                     LoadingIndicator.stopAnimating()
             })
             .disposed(by: disposeBag)
     }
     
-    private func showNetworkErrorAlert(with message: String) {
+    private func showNetworkErrorAlert(with message: String, retryAction: @escaping (() -> Void)) {
         
         let alertController = UIAlertController(title: "Error",
                                                 message: message,
                                                 preferredStyle: .alert)
         
-        let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] action in
-            self?.fetchUserBoards()
+        let retryAction = UIAlertAction(title: "Retry", style: .default) { _ in
+            retryAction()
         }
         alertController.addAction(retryAction)
         

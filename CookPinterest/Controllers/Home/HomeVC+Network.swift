@@ -22,7 +22,7 @@ extension HomeVC {
     
     func fetchUserDetails() {
         
-        guard let url = ResourceAddition.getURL(for: .userInfo)?.absoluteString else { return }
+        guard let url = ResourceAddition.getURL(for: .userInfo) else { return }
         
         LoadingIndicator.startAnimating()
         
@@ -35,21 +35,23 @@ extension HomeVC {
                 
                 }, onError: { [weak self] error in
                     LoadingIndicator.stopAnimating()
-                    self?.showNetworkErrorAlert(with: error.localizedDescription)
+                    self?.showNetworkErrorAlert(with: error.localizedDescription, retryAction: {
+                        self?.fetchUserDetails()
+                    })
                 }, onCompleted: {
                     LoadingIndicator.stopAnimating()
             })
             .disposed(by: disposeBag)
     }
     
-    private func showNetworkErrorAlert(with message: String) {
-        
+    private func showNetworkErrorAlert(with message: String, retryAction: @escaping (() -> Void)) {
+
         let alertController = UIAlertController(title: "Error",
                                                 message: message,
                                                 preferredStyle: .alert)
         
-        let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] action in
-            self?.fetchUserDetails()
+        let retryAction = UIAlertAction(title: "Retry", style: .default) { _ in
+            retryAction()
         }
         alertController.addAction(retryAction)
         
