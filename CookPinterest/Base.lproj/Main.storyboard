@@ -347,11 +347,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V2E-aW-bTN">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V2E-aW-bTN">
                                 <rect key="frame" x="0.0" y="20" width="375" height="281.5"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="V2E-aW-bTN" secondAttribute="height" multiplier="4:3" id="B6V-m8-L6W"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="r5e-aW-PfE" appends="YES" id="nrw-Re-une"/>
+                                </connections>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ziy-Km-hgX">
                                 <rect key="frame" x="0.0" y="301.5" width="375" height="334"/>
@@ -562,6 +566,11 @@
                         <action selector="viewSwipeDownAction:" destination="Ag4-Os-c8h" id="iii-aQ-edl"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="r5e-aW-PfE">
+                    <connections>
+                        <action selector="imageTappedAction:" destination="Ag4-Os-c8h" id="0LH-fc-RZ2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2020" y="689.5052473763119"/>
         </scene>

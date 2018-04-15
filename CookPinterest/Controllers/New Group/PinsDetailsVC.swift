@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import BFRImageViewer
 
 class PinsDetailsVC: UIViewController {
 
@@ -29,9 +30,11 @@ class PinsDetailsVC: UIViewController {
 
     // MARK: - Data
     
-    var pinInfo: Pins?
+    internal var pinInfo: Pins?
     
-    var suggestBoardAction: (() -> Void)?
+    internal var suggestBoardAction: (() -> Void)?
+    
+    private var imageViewAnimator: BFRImageTransitionAnimator?
 
     // MARK: - View
 
@@ -41,6 +44,7 @@ class PinsDetailsVC: UIViewController {
         title = "Pin Details"
         
         configureUI()
+        prepareImageViewAnimator()
     }
     
     private func configureUI() {
@@ -67,6 +71,13 @@ class PinsDetailsVC: UIViewController {
         }
     }
     
+    private func prepareImageViewAnimator() {
+        
+        imageViewAnimator = BFRImageTransitionAnimator()
+        imageViewAnimator?.animatedImageContainer = imageView
+        imageViewAnimator?.imageOriginFrame = imageView.frame
+    }
+    
     // MARK: - Internal
     
     @objc
@@ -86,5 +97,16 @@ class PinsDetailsVC: UIViewController {
     @IBAction func viewSwipeDownAction(_ sender: Any) {
     
         dismissVC()
+    }
+    
+    @IBAction func imageTappedAction(_ sender: Any) {
+        
+        guard let image = imageView.image,
+            let imageVC = BFRImageViewController(imageSource: [image]) else { return }
+        
+        imageViewAnimator?.animatedImage = image
+        imageVC.transitioningDelegate = imageViewAnimator
+
+        present(imageVC, animated: true)
     }
 }
