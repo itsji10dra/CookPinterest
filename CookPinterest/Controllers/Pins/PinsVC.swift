@@ -20,13 +20,13 @@ class PinsVC: UIViewController, UICollectionViewDelegate {
     
     // MARK: - Data
     
-    var boardId: String?
+    internal var boardId: String?
     
-    let pinsDataSource = PublishSubject<[Pins]>()
+    internal let pinsDataSource = PublishSubject<[Pins]>()
     
     // MARK: - Rx
     
-    let disposeBag = DisposeBag()
+    internal let disposeBag = DisposeBag()
     
     private let throttleTimeInterval = 1.0
     
@@ -87,8 +87,6 @@ class PinsVC: UIViewController, UICollectionViewDelegate {
                                                             
                 if let url = element.images?.first?.url {
                     cell.imageView.af_setImage(withURL: url)
-                } else {
-                    cell.imageView.image = nil
                 }
             }
             .disposed(by: disposeBag)

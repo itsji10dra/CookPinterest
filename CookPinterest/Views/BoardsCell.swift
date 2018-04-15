@@ -10,7 +10,7 @@ import UIKit
 
 class BoardsCell: UITableViewCell {
     
-    // MARK: - IBOutelts
+    // MARK: - IBOutlets
 
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -22,7 +22,7 @@ class BoardsCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        accessoryType = BoardsVC.accessoryType
+        accessoryType = BoardsVC.cellAccessoryType
         clearSelectedBackgroundView()
     }
 
@@ -32,6 +32,16 @@ class BoardsCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        titleLabel.text = nil
+        descriptionLabel.text = nil
+        iconImageView.image = nil
+    }
+
+    // MARK: - Private Methods
+
     private func clearSelectedBackgroundView() {
         let view = UIView()
         view.backgroundColor = UIColor.clear

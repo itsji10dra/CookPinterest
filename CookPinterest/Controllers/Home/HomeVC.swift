@@ -24,7 +24,7 @@ class HomeVC: UIViewController {
     
     // MARK: - Rx
     
-    let disposeBag = DisposeBag()
+    internal let disposeBag = DisposeBag()
     
     // MARK: - View
 
@@ -94,8 +94,9 @@ class HomeVC: UIViewController {
         pushPinsScene()
     }
     
-    @IBAction func viewFollowersAction(_ sender: Any) {
+    @IBAction func viewFollowedBoardsAction(_ sender: Any) {
     
+        pushBoardsScene(showingSelfData: false)
     }
     
     @IBAction func signOutAction(_ sender: Any) {
@@ -106,9 +107,10 @@ class HomeVC: UIViewController {
     
     // MARK: - Navigation
     
-    private func pushBoardsScene() {
+    private func pushBoardsScene(showingSelfData: Bool = true) {
         
         guard let boardsVC = Navigation.getViewController(type: BoardsVC.self, identifer: "Boards") else { return }
+        boardsVC.showingBoardsFromOtherUser = !showingSelfData
         navigationController?.pushViewController(boardsVC, animated: true)
     }
     

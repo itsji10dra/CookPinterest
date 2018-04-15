@@ -10,8 +10,18 @@ import UIKit
 
 class PinsCell: UICollectionViewCell {
     
+    // MARK: - IBOutlets
+
     @IBOutlet weak var imageView: UIImageView!
 
     @IBOutlet weak var titleLabel: UILabel!
 
+    // MARK: - View
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        titleLabel.text = nil
+        imageView.image = nil
+    }
 }

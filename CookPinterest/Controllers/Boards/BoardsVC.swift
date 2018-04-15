@@ -20,15 +20,17 @@ class BoardsVC: UIViewController, UITableViewDelegate {
 
     // MARK: - Data
     
-    let boardsDataSource = PublishSubject<[Boards]>()
+    internal let boardsDataSource = PublishSubject<[Boards]>()
 
-    var pinId: String?
+    internal var pinId: String?
 
-    static var accessoryType: UITableViewCellAccessoryType = .disclosureIndicator
+    static internal var cellAccessoryType: UITableViewCellAccessoryType = .disclosureIndicator
 
+    internal var showingBoardsFromOtherUser = false
+    
     // MARK: - Rx
     
-    let disposeBag = DisposeBag()
+    internal let disposeBag = DisposeBag()
     
     private let throttleTimeInterval = 1.0
     
@@ -49,10 +51,15 @@ class BoardsVC: UIViewController, UITableViewDelegate {
         
         let hasPinId = pinId != nil
         
-        if hasPinId {         //Search not allowed if showing suggested boards on behalf of specific pin.
+        //Search not allowed if showing suggested boards on behalf of specific pin or from other users.
+
+        if hasPinId {
             searchBar.removeFromSuperview()
             title = "Board Suggestion"
-            BoardsVC.accessoryType = .none
+            BoardsVC.cellAccessoryType = .none
+        }
+        else if showingBoardsFromOtherUser {
+            searchBar.removeFromSuperview()
         }
     }
 
@@ -108,6 +115,11 @@ class BoardsVC: UIViewController, UITableViewDelegate {
     
     private func fetchDefaultBoards() {
     
+        if showingBoardsFromOtherUser {
+            fetchFollowingBoards()
+            return
+        }
+        
         if let pinId = pinId {
             fetchUserSuggestedBoards(for: pinId)
         } else {

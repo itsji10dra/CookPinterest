@@ -34,6 +34,13 @@ extension BoardsVC {
         fetchBoards(with: url)
     }
     
+    internal func fetchFollowingBoards() {
+        
+        guard let url = ResourceAddition.getURL(for: .followingBoards) else { return }
+        
+        fetchBoards(with: url)
+    }
+
     // MARK: - Private
 
     private func fetchBoards(with url: URL) {
