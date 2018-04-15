@@ -26,6 +26,8 @@ class HomeVC: UIViewController {
     
     internal let disposeBag = DisposeBag()
     
+    private let defaultText = "Kindly authenticate yourself."
+    
     // MARK: - View
 
     override func viewDidLoad() {
@@ -63,7 +65,7 @@ class HomeVC: UIViewController {
         var fullName: String?
         
         defer {
-            var text = "Kindly authenticate yourself."
+            var text = defaultText
             if let name = fullName {
                 let greeting = "Welcome: "
                 text = greeting + name

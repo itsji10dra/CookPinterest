@@ -38,8 +38,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVJ-5T-2JQ">
-                                <rect key="frame" x="187" y="114" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kindly authenticate yourself." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVJ-5T-2JQ">
+                                <rect key="frame" x="79" y="93.5" width="216.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -361,10 +361,10 @@
                                 <rect key="frame" x="0.0" y="301.5" width="375" height="334"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZF1-Ks-NrH">
-                                        <rect key="frame" x="0.0" y="0.5" width="375" height="334"/>
+                                        <rect key="frame" x="0.0" y="1" width="375" height="334"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Acx-D1-0kr">
-                                                <rect key="frame" x="8" y="0.5" width="359" height="334"/>
+                                                <rect key="frame" x="8" y="1" width="359" height="334"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z8A-Mq-tJx">
                                                         <rect key="frame" x="0.0" y="0.5" width="33" height="50"/>
@@ -447,16 +447,16 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="blP-N2-J61">
-                                                        <rect key="frame" x="0.0" y="240.5" width="107.5" height="50"/>
+                                                        <rect key="frame" x="0.0" y="240.5" width="107.5" height="34"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of comments:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5l-wJ-S82" userLabel="No. of Comments:">
-                                                                <rect key="frame" x="0.0" y="0.5" width="107.5" height="32"/>
+                                                                <rect key="frame" x="0.0" y="0.5" width="107.5" height="16"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySj-hf-53X">
-                                                                <rect key="frame" x="0.0" y="32.5" width="107.5" height="18"/>
+                                                                <rect key="frame" x="0.0" y="16.5" width="107.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -467,16 +467,16 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vkl-Fv-KAI">
-                                                        <rect key="frame" x="0.0" y="300.5" width="116.5" height="34"/>
+                                                        <rect key="frame" x="0.0" y="284.5" width="116.5" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of times saved:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoG-ge-jlj">
-                                                                <rect key="frame" x="0.0" y="0.5" width="116.5" height="16"/>
+                                                                <rect key="frame" x="0.0" y="0.5" width="116.5" height="32"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABQ-ow-Inx">
-                                                                <rect key="frame" x="0.0" y="16.5" width="116.5" height="18"/>
+                                                                <rect key="frame" x="0.0" y="32.5" width="116.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -579,6 +579,6 @@
         <image name="big-placeholder" width="166" height="166"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pqL-gq-lTZ"/>
+        <segue reference="Ttu-kP-Wz1"/>
     </inferredMetricsTieBreakers>
 </document>
