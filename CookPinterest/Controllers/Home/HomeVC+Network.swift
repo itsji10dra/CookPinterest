@@ -15,8 +15,12 @@ extension HomeVC {
         
         guard let url = ResourceAddition.getURL(for: .oAuth, isAuthenticated: false) else { return }
         
-        let safariVC = SFSafariViewController(url: url)
-        navigationController?.present(safariVC, animated: true, completion: nil)
+        if #available(iOS 11.0, *) {
+            let safariVC = SFSafariViewController(url: url)
+            navigationController?.present(safariVC, animated: true, completion: nil)
+        } else {
+            UIApplication.shared.open(url)
+        }
     }
     
     func fetchUserDetails() {
