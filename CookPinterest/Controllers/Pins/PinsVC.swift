@@ -39,6 +39,7 @@ class PinsVC: UIViewController, UICollectionViewDelegate {
         configureLayout()
         bindSearchModel()
         bindDataSource()
+        configureModelSelection()
         fetchDefaultPins()
     }
     
@@ -94,6 +95,15 @@ class PinsVC: UIViewController, UICollectionViewDelegate {
             .disposed(by: disposeBag)
     }
     
+    private func configureModelSelection() {
+        
+        collectionView.rx.modelSelected(Pins.self)
+            .subscribe(onNext: { [weak self] pin in
+                self?.showPinsDetailsScene(for: pin)
+            })
+            .disposed(by: disposeBag)
+    }
+
     private func fetchDefaultPins() {
         
         if let boardId = boardId {

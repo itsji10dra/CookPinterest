@@ -22,6 +22,8 @@ class BoardsVC: UIViewController, UITableViewDelegate {
     
     let boardsDataSource = PublishSubject<[Boards]>()
 
+    var pinId: String?
+
     // MARK: - Rx
     
     let disposeBag = DisposeBag()
@@ -34,11 +36,8 @@ class BoardsVC: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
 
         bindSearchModel()
-        
         bindDataSource()
-
         configureModelSelection()
-
         fetchUserBoards()
     }
     
