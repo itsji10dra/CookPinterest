@@ -36,6 +36,7 @@ extension Date {
         case dd_space_MMM_space_YY                                  = "dd MMM YY"
         case dd_slash_MM_slash_yyyy                                 = "dd/MM/yyyy"
         case dd_space_MMM_space_YYYY                                = "dd MMM YYYY"
+        case dd_space_MMM_space_YYYY_HH_colon_mm                    = "dd MMM YYYY, HH:mm"
         case dd_space_MMM_comma_space_yy                            = "dd MMM, yy"
         case dd_space_MMM_space_yy                                  = "dd MMM yy"
         case d_space_MMM_space_yy                                   = "d MMM yy"

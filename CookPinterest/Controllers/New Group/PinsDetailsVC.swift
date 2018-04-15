@@ -17,9 +17,15 @@ class PinsDetailsVC: UIViewController {
     
     @IBOutlet private weak var noteLabel: UILabel!
     
-    @IBOutlet weak var createdByLabel: UILabel!
+    @IBOutlet private weak var boardNameLabel: UILabel!
+
+    @IBOutlet private weak var createdByLabel: UILabel!
     
-    @IBOutlet weak var createdTimeLabel: UILabel!
+    @IBOutlet private weak var createdTimeLabel: UILabel!
+
+    @IBOutlet private weak var commentsCountLabel: UILabel!
+
+    @IBOutlet private weak var saveCountLabel: UILabel!
 
     // MARK: - Data
     
@@ -42,8 +48,15 @@ class PinsDetailsVC: UIViewController {
         guard let pinInfo = pinInfo else { return }
         
         noteLabel.text = pinInfo.note
-        createdByLabel.text = pinInfo.creator?.firstName
-        createdTimeLabel.text = Date.string(from: pinInfo.createdAt, format: Date.Format.d_space_MMM_comma_space_EEE)
+        boardNameLabel.text = pinInfo.board?.name
+
+        let firstName = pinInfo.creator?.firstName ?? ""
+        let lastName = pinInfo.creator?.lastName ?? ""
+        createdByLabel.text = firstName + " " + lastName
+        
+        createdTimeLabel.text = Date.string(from: pinInfo.createdAt, format: .dd_space_MMM_space_YYYY_HH_colon_mm)
+        commentsCountLabel.text = String(pinInfo.counts?.comments ?? 0)
+        saveCountLabel.text = String(pinInfo.counts?.saves ?? 0)
         
         if let color = pinInfo.color {
             imageView.backgroundColor = UIColor.colorWithHex(color)

@@ -47,7 +47,7 @@ class BoardsVC: UIViewController, UITableViewDelegate {
         
         let hasPinId = pinId != nil
         
-        if hasPinId {         //Search not allowed if showing boards suggested on behalf of specific pin.
+        if hasPinId {         //Search not allowed if showing suggested boards on behalf of specific pin.
             searchBar.removeFromSuperview()
             title = "Board Suggestion"
         }
