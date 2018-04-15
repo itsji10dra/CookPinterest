@@ -24,6 +24,8 @@ class BoardsVC: UIViewController, UITableViewDelegate {
 
     var pinId: String?
 
+    static var accessoryType: UITableViewCellAccessoryType = .disclosureIndicator
+
     // MARK: - Rx
     
     let disposeBag = DisposeBag()
@@ -50,6 +52,7 @@ class BoardsVC: UIViewController, UITableViewDelegate {
         if hasPinId {         //Search not allowed if showing suggested boards on behalf of specific pin.
             searchBar.removeFromSuperview()
             title = "Board Suggestion"
+            BoardsVC.accessoryType = .none
         }
     }
 
@@ -92,6 +95,8 @@ class BoardsVC: UIViewController, UITableViewDelegate {
     }
     
     private func configureModelSelection() {
+        
+        guard pinId == nil else { return }
         
         tableView.rx.modelSelected(Boards.self)
             .subscribe(onNext:  { [weak self] board in
