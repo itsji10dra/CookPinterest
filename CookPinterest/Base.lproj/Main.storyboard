@@ -45,27 +45,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lqK-25-vhO">
-                                <rect key="frame" x="123.5" y="164" width="127" height="150"/>
+                                <rect key="frame" x="99.5" y="164" width="175" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8w-Ez-ZSu">
-                                        <rect key="frame" x="0.0" y="0.0" width="127" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
                                         <state key="normal" title="View My Boards"/>
                                         <connections>
                                             <action selector="viewBoardsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="41O-oU-el3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dS-ml-hRs">
-                                        <rect key="frame" x="0.0" y="60" width="127" height="30"/>
+                                        <rect key="frame" x="0.0" y="60" width="175" height="30"/>
                                         <state key="normal" title="View All My Pins"/>
                                         <connections>
                                             <action selector="viewPinsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qy8-Yp-Gal"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FP8-A3-f27">
-                                        <rect key="frame" x="0.0" y="120" width="127" height="30"/>
-                                        <state key="normal" title="View My Followers"/>
+                                        <rect key="frame" x="0.0" y="120" width="175" height="30"/>
+                                        <state key="normal" title="View My Followed Boards"/>
                                         <connections>
-                                            <action selector="viewFollowersAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JMs-h4-xJQ"/>
+                                            <action selector="viewFollowedBoardsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JMs-h4-xJQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -208,7 +208,7 @@
                         <viewLayoutGuide key="safeArea" id="NVd-1I-4F7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Boards" id="C2V-Si-loO">
-                        <barButtonItem key="backBarButtonItem" title=" " id="iNE-Jf-WBO"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="adf-6b-yVO"/>
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="vva-gD-Vha" id="JuU-ic-Wfx"/>

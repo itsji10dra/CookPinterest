@@ -58,7 +58,7 @@ struct ResourceAddition {
             guard let accessToken = TokenManager.accessToken else { return nil }
             return ["access_token"  : accessToken]
             
-        case .userBoards:
+        case .userBoards, .followingBoards:
             guard let accessToken = TokenManager.accessToken else { return nil }
             return ["access_token"  : accessToken,
                     "fields"        : "id,name,url,image,description,privacy,counts,created_at,creator"]
@@ -88,16 +88,12 @@ struct ResourceAddition {
             
         case .suggestedBoards:
             guard let boardsParameters = getQueryParameters(for: .userBoards),
-                let searchQuery = parameters?.first else { return nil }
+                let pinId = parameters?.first else { return nil }
             
-            let queryParameters = ["pin_id" : searchQuery]
+            let queryParameters = ["pin" : pinId]
             let finalParameters = boardsParameters.merging(queryParameters) { (_, new) in new }
             
             return finalParameters
-            
-        case .userFollowers:
-            guard let accessToken = TokenManager.accessToken else { return nil }
-            return ["access_token"  : accessToken]
         }
     }
     
