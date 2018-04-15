@@ -82,4 +82,9 @@ class PinsDetailsVC: UIViewController {
             self?.suggestBoardAction?()
         }
     }
+    
+    @IBAction func viewSwipeDownAction(_ sender: Any) {
+    
+        dismissVC()
+    }
 }

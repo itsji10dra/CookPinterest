@@ -12,6 +12,8 @@ class PinsCell: UICollectionViewCell {
     
     // MARK: - IBOutlets
 
+    @IBOutlet weak var imageHolderView: UIView!
+    
     @IBOutlet weak var imageView: UIImageView!
 
     @IBOutlet weak var titleLabel: UILabel!

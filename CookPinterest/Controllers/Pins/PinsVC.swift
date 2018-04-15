@@ -82,7 +82,7 @@ class PinsVC: UIViewController, UICollectionViewDelegate {
                 cell.titleLabel.text = element.note
                                                             
                 if let color = element.color {
-                    cell.backgroundColor = UIColor.colorWithHex(color)
+                    cell.imageHolderView.backgroundColor = UIColor.colorWithHex(color)
                 }
                                                             
                 if let url = element.images?.first?.url {
