@@ -94,6 +94,10 @@ class HomeVC: UIViewController {
         pushPinsScene()
     }
     
+    @IBAction func viewFollowersAction(_ sender: Any) {
+    
+    }
+    
     @IBAction func signOutAction(_ sender: Any) {
         
         TokenManager.clear()

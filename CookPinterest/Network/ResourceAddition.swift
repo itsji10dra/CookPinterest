@@ -51,7 +51,7 @@ struct ResourceAddition {
             return ["response_type" : "token",
                     "client_id"     : Configuration.clientId,
                     "state"         : Configuration.status,
-                    "scope"         : "read_public",
+                    "scope"         : Configuration.scope,
                     "redirect_uri"  : String(format: "pdk%@://", Configuration.clientId)]
             
         case .userInfo:
@@ -94,7 +94,10 @@ struct ResourceAddition {
             let finalParameters = boardsParameters.merging(queryParameters) { (_, new) in new }
             
             return finalParameters
-
+            
+        case .userFollowers:
+            guard let accessToken = TokenManager.accessToken else { return nil }
+            return ["access_token"  : accessToken]
         }
     }
     
