@@ -26,7 +26,7 @@ class BoardsVC: UIViewController, UITableViewDelegate {
     
     let disposeBag = DisposeBag()
     
-    let throttleTimeInterval = 1.0
+    private let throttleTimeInterval = 1.0
     
     // MARK: - View
 

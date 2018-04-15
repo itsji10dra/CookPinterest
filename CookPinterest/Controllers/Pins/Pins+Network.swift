@@ -11,16 +11,33 @@ import RxAlamofire
 
 extension PinsVC {
     
-    func fetchPins(for boardId: String? = nil) {
+    // MARK: - Internal
 
-        //If boardId is received, it will pull Pins for specific board, or else all Pins for logged in user.
+    internal func fetchUserPins() {
+
+        guard let url = ResourceAddition.getURL(for: .userPins) else { return }
+
+        fetchPins(with: url)
+    }
+    
+    internal func fetchUserPins(for boardId: String) {
         
-        let hasBoardId = boardId != nil
-        let resourcePath: Resource = hasBoardId ? .boardPins : .userPins
-        let parameters: [String]? = hasBoardId ? [boardId!] : nil
+        guard let url = ResourceAddition.getURL(for: .boardPins, withResource: [boardId]) else { return }
         
-        guard let url = ResourceAddition.getURL(for: resourcePath, withResource: parameters) else { return }
+        fetchPins(with: url)
+    }
+    
+    internal func fetchUserPins(with query: String) {
         
+        guard let url = ResourceAddition.getURL(for: .searchUserPins, appendingQuery: [query]) else { return }
+        
+        fetchPins(with: url)
+    }
+    
+    // MARK: - Private
+    
+    private func fetchPins(with url: URL) {
+
         LoadingIndicator.startAnimating()
         
         RxAlamofire.requestJSON(.get, url)
@@ -46,7 +63,7 @@ extension PinsVC {
                                                 preferredStyle: .alert)
         
         let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] action in
-            self?.fetchPins()
+            self?.fetchUserPins()
         }
         alertController.addAction(retryAction)
         

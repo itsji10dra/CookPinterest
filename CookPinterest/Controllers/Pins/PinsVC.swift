@@ -10,12 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 import AlamofireImage
-import PinterestLayout
 
-class PinsVC: UIViewController, UICollectionViewDelegate, PinterestLayoutDelegate {
+class PinsVC: UIViewController, UICollectionViewDelegate {
 
     // MARK: - IBOutlets
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Data
@@ -28,32 +28,63 @@ class PinsVC: UIViewController, UICollectionViewDelegate, PinterestLayoutDelegat
     
     let disposeBag = DisposeBag()
     
+    private let throttleTimeInterval = 1.0
+    
     // MARK: - View
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureUI()
         configureLayout()
+        bindSearchModel()
         bindDataSource()
-        fetchPins(for: boardId)
+        fetchDefaultPins()
     }
     
     // MARK: - Private Methods
     
-    private func configureLayout() {
+    private func configureUI() {
         
-        let layout = PinterestLayout()
-        collectionView.collectionViewLayout = layout
-        layout.delegate = self
-        layout.cellPadding = 5
-        layout.numberOfColumns = 2
+        let hasBoardId = boardId != nil
+        
+        if hasBoardId {         //Search not allowed if showing pins from specific board.
+            searchBar.removeFromSuperview()
+        }
     }
     
+    private func bindSearchModel() {
+        
+        let searchWord: Driver<String>? = searchBar.rx.text.orEmpty.asDriver()
+            .flatMapLatest { [weak self] in
+                let invalidCharacter = CharacterSet.letters.union(.whitespaces).inverted
+                let validInputText = $0.trimmingCharacters(in: invalidCharacter)
+                self?.searchBar.text = validInputText
+                let shouldReset = validInputText.count < 1
+                if shouldReset == true {
+                    self?.fetchDefaultPins()
+                }
+                return Driver.just(validInputText)
+            }
+            .distinctUntilChanged()
+            .throttle(throttleTimeInterval)
+        
+        searchWord?.drive(onNext: { [weak self] searchText in
+            self?.fetchUserPins(with: searchText)
+        }).disposed(by: self.disposeBag)
+    }
+
     private func bindDataSource() {
         
         pinsDataSource.bind(to: collectionView.rx.items(cellIdentifier: "PinsCell",
                                                         cellType: PinsCell.self)) { (row, element, cell) in
-                                                                                                                
+                                 
+                cell.titleLabel.text = element.note
+                                                            
+                if let color = element.color {
+                    cell.backgroundColor = UIColor.colorWithHex(color)
+                }
+                                                            
                 if let url = element.images?.first?.url {
                     cell.imageView.af_setImage(withURL: url)
                 } else {
@@ -63,20 +94,12 @@ class PinsVC: UIViewController, UICollectionViewDelegate, PinterestLayoutDelegat
             .disposed(by: disposeBag)
     }
     
-    // MARK: - PinterestLayoutDelegate
-    
-    func collectionView(collectionView: UICollectionView,
-                        heightForImageAtIndexPath indexPath: IndexPath,
-                        withWidth: CGFloat) -> CGFloat {
+    private func fetchDefaultPins() {
         
-        return 100
+        if let boardId = boardId {
+            fetchUserPins(for: boardId)
+        } else {
+            fetchUserPins()
+        }
     }
-    
-    func collectionView(collectionView: UICollectionView,
-                        heightForAnnotationAtIndexPath indexPath: IndexPath,
-                        withWidth: CGFloat) -> CGFloat {
-        
-        return 100
-    }
-
 }
