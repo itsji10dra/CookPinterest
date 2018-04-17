@@ -10,7 +10,7 @@ struct Configuration {
         
     static let url          = "https://api.pinterest.com"
     
-    static let clientId     = "4960611306886413734"
+    static let clientId     = ""
     
     static let scope        = "read_public,read_relationships"
     
