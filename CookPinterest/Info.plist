@@ -23,7 +23,7 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>pdk</string>
+				<string>pdk+clientId</string>
 			</array>
 		</dict>
 	</array>
