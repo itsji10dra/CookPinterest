@@ -21,7 +21,10 @@ struct Configuration {
         if clientId.isEmpty || scope.isEmpty {
             fatalError("""
                 Invalid configuration found.
-                Replace `clientId` as received from developers.pinterest.com.
+                Steps to fix:
+                    - Replace `clientId` as received from developers.pinterest.com.
+                    - Update Info.plist > URL Scheme > `pkd` + `clientId`.
+                        - Say your clientId is `6253638936`, your URL scheme will be `pkd6253638936`.
                 Also, define your `scope`.
             """)
         }
