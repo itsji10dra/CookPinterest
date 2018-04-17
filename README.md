@@ -9,9 +9,9 @@ Pre-Requisites:
 
 Configuration:
 
-    a) Open project > CookPinterest >  Network > Configuration.swift
+    a) Open path-to-project > CookPinterest >  Network > Configuration.swift
     b) Replace `clientId` as received from developers.pinterest.com
-    c) Open > project_folder > CookPinterest > Info.plist
+    c) Open path-to-project > CookPinterest > Info.plist
     d) Update > URL Scheme > `pkd` + `clientId`.
             -   Say your clientId is `6253638936`, your URL scheme will be `pkd6253638936`.
 
@@ -25,7 +25,7 @@ Installation:
 
 Known Build Issues:
 
-    a) Project rely on third party pod `PinterestLayout` (https://github.com/MagicLab-team/PinterestLayout) which requires version Swift 3.+. After successfull `pod install` on hitting run if you see error in specific to `PinterestLayout` pod project, kindly update its language version to Swift 3.3 from 4.1. Here are the steps,
+    a) Project rely on third party pod `PinterestLayout` (https://github.com/MagicLab-team/PinterestLayout) which requires version Swift 3.x. After successfull `pod install` on hitting run if you see error in specific to `PinterestLayout` pod project, kindly update its language version to Swift 3.3 from 4.1. Here are the steps,
         * Open CookPinterest.xcworkspace
         * Select 'Pods.xcodeproj'
         * Select 'PinterestLayout' from targets.
