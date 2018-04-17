@@ -3,6 +3,14 @@ Pre-Requisites:
 a) Xcode v9.3
 b) Pods v1.4.0 (https://guides.cocoapods.org/using/getting-started.html)
 
+Configuration:
+
+a) Open project > CookPinterest >  Network > Configuration.swift
+b) Replace `clientId` as received from developers.pinterest.com
+c) Open > project_folder > CookPinterest > Info.plist
+d) Update > URL Scheme > `pkd` + `clientId`.
+        -   Say your clientId is `6253638936`, your URL scheme will be `pkd6253638936`.
+
 Installation:
 
 a) Open terminal
